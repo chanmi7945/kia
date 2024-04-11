@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>Kia-이선미</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="#">
+    <style type="text/css"></style>
+    <!-- w3 -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/7c2b0d3fd4.js" crossorigin="anonymous"></script>
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- slick -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- jsdelivr
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</head>
+
+
+<body>
+
+
+    <main>
+
+        <div w3-include-html="header.html"></div>
+
+        <aside>
+            <button onclick="backToTop()" id="btn-back-to-top" title="위로 가기">Top</button>
+        </aside>
+
+
+        <div class="mbg-list">
+            <div class="mbg-img1">
+                <div class="main-img">
+                    <img src="images/main/pc_1-1.jpg">
+                    <img src="images/main/mb_1-1.jpg">
+                </div>
+                <div class="main-text">
+                    <p>Masters that Inspire</p>
+                    <h2>The 2024 K9</h2>
+                    <button onclick="login()">자세히보기</button>
+                    <button id="product_button">견적내기</button>
+                </div>
+            </div>
+            <div class="mbg-img2">
+                <div class="main-img">
+                    <img src="images/main/pc_2.jpg">
+                    <img src="images/main/mb_2.jpg">
+                </div>
+                <div class="main-text">
+                    <p>나만의 스케일대로</p>
+                    <h2>Carnival</h2>
+                    <button onclick="login()">자세히보기</button>
+                    <button id="product_button2">견적내기</button>
+                </div>
+            </div>
+
+            <div class="mbg-img3">
+                <div class="main-img">
+                    <img src="images/main/pc_3.jpg">
+                    <img src="images/main/mb_3.jpg">
+                    </img>
+                </div>
+                <div class="main-text">
+                    <p>가슴 뛰는 디자인과<br>감각적인 혁신으로 완성한<br>가장 진보적인 세단</p>
+                    <h2>The new K5</h2>
+                    <button onclick="login()">자세히보기</button>
+                    <button id="product_button3">견적내기</button>
+                </div>
+            </div>
+
+            <div class="mbg-img4">
+                <div class="main-img">
+                    <img src="images/main/pc_4.jpg">
+                    <img src="images/main/mb_4.jpg">
+                </div>
+                <div class="main-text">
+                    <p>새로운 도심 엔트리 EV</p>
+                    <h2>The Kia Ray EV</h2>
+                    <button onclick="login()">자세히보기</button>
+                    <button id="product_button4">견적내기</button>
+                </div>
+            </div>
+
+            <div class="mbg-img5">
+                <div class="main-img">
+                    <img src="images/main/pc_5.jpg">
+                    <img src="images/main/mb_5.jpg">
+                </div>
+                <div class="main-text">
+                    <p>The Mainstream</p>
+                    <h2>The New Sorento</h2>
+                    <button onclick="login()">자세히보기</button>
+                </div>
+            </div>
+
+            <div class="mbg-img6">
+                <div class="main-img">
+                    <img src="images/main/pc_6.png">
+                    <img src="images/main/mb_6.png">
+                </div>
+                <div class="main-text">
+                    <p>기아를 만나는 새로운 방법</p>
+                    <h2>기아 인증중고차 홈페이지</h2>
+                    <button onclick="login()">바로가기</button>
+                    <button>견적내기</button>
+                </div>
+            </div>
+
+            <div class="mbg-img7">
+                <div class="main-img">
+                    <img src="images/main/pc_7.jpg">
+                    <img src="images/main/mb_7.jpg">
+                </div>
+                <div class="main-text">
+                    <p>스마트한 카 라이프의 시작! 기아렌터카</p>
+                    <h2>기아렌터카 온라인 페이지</h2>
+                    <button onclick="login()">렌터카 견적 내기</button>
+                    <button onclick="login()">바로가기</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 메인 슬라이드 방향버튼 -->
+        <div class="slick-next">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+        <div class="slick-prev">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        </div>
+
+    </main>
+
+    <!-- 메인 견적내기 modal창 -->
+    <article class="product-modal">
+
+        <div id="overlay">
+
+            <section class="overlay-cover">
+
+                <div id="product_modal" class="product_modal">
+
+                    <div class="modal_header">
+                        <h3>상세 견적</h3>
+                        <span class="product_close">&times;</span>
+                    </div>
+
+                    <div class="modal_img">
+
+                        <div class="swiper mimgs">
+
+                            <div class="swiper-wrapper mimg-w">
+
+                                <div class="swiper-slide mimg-s">
+                                    <h3>카니발</h3>
+                                    <img src="/images/main/modal_1.png" alt="">
+                                    <p class="append-buttons">
+                                        <a href="#">34,700,000 원부터
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div class="swiper-slide mimg-s">
+                                    <h3>카니발 하이리무진</h3>
+                                    <img src="/images/main/modal_2.png" alt="">
+                                    <p class="append-buttons">
+                                        <a href="#">62,500,000 원부터
+                                        </a>
+                                    </p>
+                                </div>
+
+                                <div class="swiper-slide mimg-s">
+                                    <h3>K5</h3>
+                                    <img src="/images/main/modal_3.png" alt="">
+                                    <p class="append-buttons">
+                                        <a href="#">27,840,000 원부터</a>
+                                    </p>
+                                </div>
+
+                                <div class="swiper-slide mimg-s">
+                                    <h3>레이</h3>
+                                    <img src="/images/main/modal_4.png" alt="">
+                                    <p class="append-buttons">
+                                        <a href="#">27,750,000 원부터</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal_content">
+                        <div class="grid_one">
+                            <div>
+                                <button type="button" class="product-collapsible" onclick="collapse(this);">기본
+                                    트림</button>
+                                <div class="product-content">
+                                    <label>
+                                        <input type="radio" name="trim">
+                                        <p>3.5 가솔린</p>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="trim">
+                                        <p>2.2 디젤</p>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="trim">
+                                        <p>1.6 하이브리드</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="button" class="product-collapsible" onclick="collapse(this);">컬러
+                                    선택</button>
+                                <div class="product-content">
+                                    <label>
+                                        <input type="radio" name="sit">
+                                        <p>스노우 화이트 펄</p>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="sit">
+                                        <p>오로라 블랙 펄</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="button" class="product-collapsible" onclick="collapse(this);">선택
+                                    옵션</button>
+                                <div class="product-content">
+                                    <label>
+                                        <input type="checkbox" name="roof">
+                                        <p>프리미엄 팩</p>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="roof">
+                                        <p>스마트커넥트</p>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="roof">
+                                        <p>빌트인캠2</p>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="roof">
+                                        <p>KRELL 사운드</p>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button type="button" class="product-collapsible" onclick="collapse(this);">편의
+                                    기능</button>
+                                <div class="product-content">
+                                    <label>
+                                        <input type="checkbox" name="trim">
+                                        <p>자율주행</p>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="trim">
+                                        <p>온열장치</p>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-done">
+                        <div>
+                            <button onclick="login()" class="product_close2">견적완료</button>
+                        </div>
+                    </div>
+
+                    <div class="modal_footer">
+                        <img src="/images/icon/icon_alert.svg" alt="">
+                        <small>본 견적서는 고객님의 차량 구입(청약) 의사 결정에 도움을 드리고자 작성된 것으로 법적인 효력은 없으며, 계약을 원하실 경우 별도로 청약 의사 표시를 하셔야
+                            합니다. </small>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </article>
+
+
+    <script>
+        // main 슬라이더
+        $('.mbg-list').slick({
+            speed: 700,
+            infinite: true,
+            autoplay: true, 
+            autoplaySpeed: 5000,
+            prevArrow: $('.slick-prev'),
+            nextArrow: $('.slick-next'),
+            dots: true,
+            fade: true,
+            cssEase: 'linear',
+        });
+    </script>
+
+
+    <article class="recos">
+
+        <p>BEST KIA</p>
+
+        <section>
+            <div>
+
+                <div class="space-betweens">
+                    <div class="tabmenu-button tablink tabmenu-color" onclick="openCity(event,'London')">최근
+                        출시</div>
+                    <div class="tabmenu-button tablink" onclick="openCity(event,'Paris')">연비 효율</div>
+                    <div class="tabmenu-button tablink" onclick="openCity(event,'Tokyo')">적재공간</div>
+                </div>
+
+                <div class="margin-tops centers">
+
+                    <div id="London" class="city">
+                        <h3 class="article_title"></h3>
+
+                        <section class="reco-cover">
+                            <div class="swiper reco">
+                                <div class="swiper-wrapper reco-w">
+
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>The 2024 K9</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 1</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>3.3 가솔린 터보ㅣ마스터즈 AWD</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/k9.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>출시일</b>
+                                                    <p>2024-04-02</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>3,342 cc</p>
+                                                </div>
+                                                <div><b>최고출력</b>
+                                                    <p>370 ps / 6,000 rpm</p>
+                                                </div>
+                                                <div><b>외장컬러</b>
+                                                    <p>딥 크로마 블루</p>
+                                                </div>
+                                                <div><b>옵션 (4)</b>
+                                                    <p>프리미엄 사운드 등</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                75,710,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>The Kia EV6 GT</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 2</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>EV 전기차ㅣGT 4WD A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/ev6.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>출시일</b>
+                                                    <p>2024-03-04</p>
+                                                </div>
+                                                <div><b>배터리 용량</b>
+                                                    <p>77.4 kWh</p>
+                                                </div>
+                                                <div><b>최고출력</b>
+                                                    <p>430 kw / 585 ps</p>
+                                                </div>
+                                                <div><b>외장컬러</b>
+                                                    <p>문스케이프 매트 그레이</p>
+                                                </div>
+                                                <div><b>옵션 (2)</b>
+                                                    <p>빌트인 캠 와이드 선루프</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                77,680,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>The 2024 봉고 lll EV</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 3</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>EV전기차ㅣ킹캡 초장축 2WD A/T GLS 카고</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/bongo3-ev.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>출시일</b>
+                                                    <p>2024-02-01</p>
+                                                </div>
+                                                <div><b>배터리 용량</b>
+                                                    <p>588.8 kWh</p>
+                                                </div>
+                                                <div><b>최고출력</b>
+                                                    <p>133 kW / 181 ps</p>
+                                                </div>
+                                                <div><b>외장컬러</b>
+                                                    <p>클리어 화이트</p>
+                                                </div>
+                                                <div><b>옵션 (1)</b>
+                                                    <p>적재함 평바닥</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                45,780,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>봉고 lll 트럭</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 4</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>LPGㅣ킹캡 초장축 2WD A/T GLS 플러스 카고</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/bongo3.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>출시일</b>
+                                                    <p>2023-11-13</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>2,469 cc</p>
+                                                </div>
+                                                <div><b>최고출력</b>
+                                                    <p>159 ps / 3,800 rpm</p>
+                                                </div>
+                                                <div><b>외장컬러</b>
+                                                    <p>클리어 화이트</p>
+                                                </div>
+                                                <div><b>옵션 (3)</b>
+                                                    <p>적재함 평바닥 10.25인치 내비게이션(GLS)</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                75,710,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>The new Carnival</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 5</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>1.6 하이브리드ㅣ9인승 노블레스 A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/canival.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>출시일</b>
+                                                    <p>2023-11-15</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>1,598 cc</p>
+                                                </div>
+                                                <div><b>최고출력</b>
+                                                    <p>180 ps / 5,500 rpm</p>
+                                                </div>
+                                                <div><b>외장컬러</b>
+                                                    <p>아이보리 실버</p>
+                                                </div>
+                                                <div><b>옵션 (1)</b>
+                                                    <p>듀얼 선루프 드라이브 와이즈(노블레스)</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                75,710,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+
+                                </div>
+                                <div class="swiper-button-next reco-n"></div>
+                                <div class="swiper-button-prev reco-p"></div>
+                            </div>
+
+                        </section>
+                        <!-- <div class="swiper-pagination reco-pag"></div> -->
+                    </div>
+
+                    <div id="Paris" class="city" style="display:none">
+                        <h3 class="article_title"></h3>
+
+                        <section class="reco-cover">
+                            <div class="swiper reco">
+                                <div class="swiper-wrapper reco-w">
+
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>니로</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 1</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>1.6 하이브리드ㅣ트렌디 2WD DCT</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/niro.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>복합 연비</b>
+                                                    <p>20.8 km/ℓ</p>
+                                                </div>
+                                                <div><b>도심 연비</b>
+                                                    <p>21.9 km/ℓ</p>
+                                                </div>
+                                                <div><b>고속도로 연비</b>
+                                                    <p>19.6 km/ℓ</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>1,580 cc</p>
+                                                </div>
+                                                <div><b>옵션 (2)</b>
+                                                    <p>컨비니언스, 내비게이션</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                30,020,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>K8</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 2</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>1.6 터보 하이브리드ㅣ시그니서 A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/k8.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>복합 연비</b>
+                                                    <p>17.1 km/ℓ</p>
+                                                </div>
+                                                <div><b>도심 연비</b>
+                                                    <p>17.2 km/ℓ</p>
+                                                </div>
+                                                <div><b>고속도로 연비</b>
+                                                    <p>16.9 km/ℓ</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>1,598 cc</p>
+                                                </div>
+                                                <div><b>옵션 (1)</b>
+                                                    <p>드라이브 와이즈(시그니처)</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                50,270,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>스포티지</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 3</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>1.6 터보 하이브리드ㅣ30th Edition 그린내자 4WD A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/sportage.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>복합연비</b>
+                                                    <p>15.2 km/ℓ</p>
+                                                </div>
+                                                <div><b>도심 연비</b>
+                                                    <p>15.4 km/ℓ</p>
+                                                </div>
+                                                <div><b>고속도로 연비</b>
+                                                    <p>14.9 km/ℓ</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>1,598 cc</p>
+                                                </div>
+                                                <div><b>옵션 (1)</b>
+                                                    <p>빌트인 캠(하이브리드)</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                43,900,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>모닝</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 4</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>1.0 가솔린ㅣ트렌디 A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/morning.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>복합 연비</b>
+                                                    <p>15.1 km/ℓ</p>
+                                                </div>
+                                                <div><b>도심 연비</b>
+                                                    <p>13.8 km/ℓ</p>
+                                                </div>
+                                                <div><b>고속도로 연비</b>
+                                                    <p>16.9 km/ℓ</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>998 cc</p>
+                                                </div>
+                                                <div><b>옵션 (4)</b>
+                                                    <p>드라이브 와이즈 l 등</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                15,600,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next reco-n"></div>
+                                <div class="swiper-button-prev reco-p"></div>
+                            </div>
+
+                        </section>
+                        <!-- <div class="swiper-pagination reco-pag"></div> -->
+                    </div>
+
+                    <div id="Tokyo" class="city" style="display:none">
+                        <h3 class="article_title"></h3>
+
+                        <section class="reco-cover">
+                            <div class="swiper reco">
+                                <div class="swiper-wrapper reco-w">
+
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>카니발</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 1</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>3.5 가솔린ㅣ7인승 시그니처 A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/canival.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>트렁크 용량</b>
+                                                    <p>1,672 ℓ</p>
+                                                </div>
+                                                <div><b>복합 연비</b>
+                                                    <p>9 km/ℓ</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>3,470 cc</p>
+                                                </div>
+                                                <div><b>최고출력</b>
+                                                    <p>294 ps / 6,400 rpm</p>
+                                                </div>
+                                                <div><b>옵션 (1)</b>
+                                                    <p>컴포트(7인승)</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                46,440,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>쏘렌토</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 2</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>1.6 하이브리드ㅣ5인승 시그니처 그래비티 2WD A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/sorento.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>트렁크 용량</b>
+                                                    <p>705 ℓ</p>
+                                                </div>
+                                                <div><b>복합 연비</b>
+                                                    <p>15.7 km/ℓ</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>1,598 cc</p>
+                                                </div>
+                                                <div><b>최고 출력</b>
+                                                    <p>180 ps / 5,500 rpm</p>
+                                                </div>
+                                                <div><b>옵션 (6)</b>
+                                                    <p>컴포트 (그래비티) 등</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                51,470,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>스포티지</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 3</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>1.6 터보 하이브리드ㅣ시그니처 2WD A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/sportage_w.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>트렁크 용량</b>
+                                                    <p>637 ℓ</p>
+                                                </div>
+                                                <div><b>복합 연비</b>
+                                                    <p>16.7 km/ℓ</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>1,598 cc</p>
+                                                </div>
+                                                <div><b>최고출력</b>
+                                                    <p>180 ps / 5,500 rpm</p>
+                                                </div>
+                                                <div><b>옵션 (2)</b>
+                                                    <p>모니터링 팩(하이브리드 시그니처)</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                40,160,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>모하비</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 4</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>3.0 디젤ㅣ5인승 플래티넘 그래비티 4WD A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/mohave.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>트렁크 용량</b>
+                                                    <p>580 ℓ</p>
+                                                </div>
+                                                <div><b>복합 연비</b>
+                                                    <p>9.3 km/ℓ</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>2,959 cc</p>
+                                                </div>
+                                                <div><b>최고 출력</b>
+                                                    <p>257 ps / 3,800 rpm</p>
+                                                </div>
+                                                <div><b>옵션</b>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                52,020,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                    <div class="swiper-slide reco-s">
+
+                                        <section class="r-s-cover1">
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <p>K5</p>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hi-price">TOP 5</div>
+                                                    </li>
+                                                </ul>
+                                                <h3>2.0 하이브리드ㅣ시그니처 A/T</h3>
+                                            </div>
+
+                                            <div>
+                                                <img src="images/car/k5.png" alt="">
+                                            </div>
+
+                                            <div>
+                                                <div>
+                                                    <b>트렁크 용량</b>
+                                                    <p>510 ℓ</p>
+                                                </div>
+                                                <div><b>복합 연비</b>
+                                                    <p>18.8 km/ℓ</p>
+                                                </div>
+                                                <div><b>배기량</b>
+                                                    <p>1,999 cc</p>
+                                                </div>
+                                                <div><b>최고 출력</b>
+                                                    <p>157 ps / 6,000 rpm</p>
+                                                </div>
+                                                <div><b>옵션(5)</b>
+                                                    <p>블랙 핏 컴포트(시그니처) 등</p>
+                                                </div>
+                                            </div>
+                                            <div class="r-price">
+                                                52,020,000 원
+                                            </div>
+
+                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+
+                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                        </section>
+
+                                        <section class="r-s-cover2">
+                                            <button id="cal-pop" onclick="openCalculator()"><a>견적 내기</a></button>
+                                        </section>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next reco-n"></div>
+                                <div class="swiper-button-prev reco-p"></div>
+                            </div>
+
+                        </section>
+                        <!-- <div class="swiper-pagination reco-pag"></div> -->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </article>
+
+
+    <div class="calculator">
+
+        <div>
+            <h3>할부 계산기</h3>
+
+            <div class="pay">
+                <p>선수금</p>
+                <div class="slidecontainer flex_between_center">
+                    <div class="pst">
+                        <p class="p2-1">32만원</p>
+                        <p class="p2-2">2,882만원</p>
+                        <input type="range" name="points" min="32" max="2882" step="10" value="0"
+                            oninput="document.getElementById('value1').innerHTML=this.value;">
+                    </div>
+                    <p class="box"><span id="value1"></span> 만원</p>
+                </div>
+            </div>
+
+            <div class="pay">
+                <p>할부 기간</p>
+                <div class="slidecontainer flex_between_center">
+                    <div class="pst">
+                        <p class="p2-1">3개월</p>
+                        <p class="p2-2">60개월</p>
+                        <input type="range" name="points" min="3" max="60" step="10" value="0"
+                            oninput="document.getElementById('value2').innerHTML=this.value;">
+                    </div>
+                    <p class="box"><span id="value2"></span> 개월</p>
+                </div>
+            </div>
+            <button onclick="closeCalculator()"><a>닫기</a></button>
+        </div>
+        <div id="cal-black"></div>
+        <!---창 띄우면 바깥배경 어둡게 -->
+    </div>
+
+
+    <article class="event">
+
+        <div>
+            <div class="reccos2">
+                <h2>기아 2024년 3월 구매혜택</h2>
+                <p>2024년 전기차 보조금 신청 시작!<br>기아 EV의 특별한 혜택을 만나보세요!</p>
+                <p onclick="login()" class="pcbt">자세히보기 ⇁</p>
+
+                <div>
+                    <h3>남은시간</h3>
+                    <h2 class="dDay">000일 00시 00분 00초</h2>
+                </div>
+            </div>
+
+
+            <div class="recos2">
+                <h3 class="article_title2"> 기아 EV 페스타</h3>
+
+                <section class="reco-cover2">
+                    <div class="swiper reco2">
+                        <div class="swiper-wrapper reco-w2">
+
+                            <div class="swiper-slide reco-s2">
+
+                                <section class="r-s-cover12">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <p>니로 EV (에어)</p>
+                                            </li>
+                                            <li>
+                                                <div class="hi-price2">EVENT</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <img src="images/car/niro.png" alt="">
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <b>최대 국비 보조금</b>
+                                            <p>596 만원</p>
+                                        </div>
+                                        <div><b>기아 EV 페스타</b>
+                                            <p>100 만원</p>
+                                        </div>
+                                        <div><b>지자체 보조금</b>
+                                            <p>133만원 ~ 1,017만원</p>
+                                        </div>
+                                    </div>
+                                    <div class="r-price2">
+                                        <p>실구매가</p>
+                                        <p>3,147만원~4,031만원</p>
+                                    </div>
+                                </section>
+
+                                <section class="r-s-cover22">
+                                    <div>
+                                        <button onclick="login()">자세히보기</button>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <div class="swiper-slide reco-s2">
+
+                                <section class="r-s-cover12">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <p>EV6 GT (롱레인지 2WD 19인치)</p>
+                                            </li>
+                                            <li>
+                                                <div class="hi-price2">EVENT</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <img src="images/car/ev6.png" alt="">
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <b>최대 국비 보조금</b>
+                                            <p>684 만원</p>
+                                        </div>
+                                        <div><b>기아 EV 페스타</b>
+                                            <p>300 만원</p>
+                                        </div>
+                                        <div><b>지자체 보조금</b>
+                                            <p>145만원 ~ 1,103만원</p>
+                                        </div>
+                                    </div>
+                                    <div class="r-price2">
+                                        <p>실구매가</p>
+                                        <p>3,188만원 ~ 4,146만원 </p>
+                                    </div>
+                                </section>
+
+                                <section class="r-s-cover22">
+                                    <div>
+                                        <button onclick="login()">자세히보기</button>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <div class="swiper-slide reco-s2">
+
+                                <section class="r-s-cover12">
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <p>EV9</p>
+                                            </li>
+                                            <li>
+                                                <div class="hi-price2">EVENT</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <img src="images/car/ev9.png" alt="">
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <b>최대 국비 보조금</b>
+                                            <p>596 만원</p>
+                                        </div>
+                                        <div><b>기아 EV 페스타</b>
+                                            <p>100 만원</p>
+                                        </div>
+                                        <div><b>지자체 보조금</b>
+                                            <p>133만원 ~ 1,017만원</p>
+                                        </div>
+                                    </div>
+                                    <div class="r-price2">
+                                        <p>실구매가</p>
+                                        <p>3,147만원~4,031만원</p>
+                                    </div>
+                                </section>
+
+                                <section class="r-s-cover22">
+                                    <div>
+                                        <button>자세히보기</button>
+                                    </div>
+                                </section>
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-next reco-n2"></div>
+                        <div class="swiper-button-prev reco-p2"></div>
+                    </div>
+
+                </section>
+                <!-- <div class="swiper-pagination reco-pag"></div> -->
+            </div>
+        </div>
+
+
+    </article>
+
+
+    <article class="live">
+
+        <h2>어떤 차를 찾으세요?</h2>
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">모델명을 입력해주세요. 예) 레이 <img
+                    src="images/icon/newsicon.png"></button>
+
+
+            <div id="myDropdown" class="dropdown-content">
+                <div>
+                    <p>실시간 인기차량</p>
+                    <p>2024.03.16 21:00</p>
+                </div>
+
+                <div>
+                    <span class="no">1</span>
+                    <span>레이 EV</span>
+                    <p></p>
+                    <hr>
+                    <span class="no">2</span>
+                    <span>니로 EV</span>
+                    <p></p>
+                    <hr>
+                    <span class="no">3</span>
+                    <span>니로 플러스</span>
+                    <p></p>
+                    <hr>
+                    <span class="no">4</span>
+                    <span>EV6</span>
+                    <p></p>
+                    <hr>
+                    <span class="no">5</span>
+                    <span>EV6 GT</span>
+                    <p></p>
+                    <hr>
+                    <span class="no">6</span>
+                    <span>EV9</span>
+                    <p></p>
+                    <hr>
+                    <span class="no">7</span>
+                    <span>봉고 III EV 탑차/윙바디</span>
+                    <p></p>
+                    <hr>
+                    <span class="no">8</span>
+                    <span>봉고 III EV 파워게이트</span>
+                    <p></p>
+                    <hr>
+                    <span class="no">9</span>
+                    <span>봉고 III EV</span>
+                    <p></p>
+                    <hr>
+                    <span class="no1">10</span>
+                    <span>모닝</span>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p>#셀토스</p>
+            <p>#K3 GT</p>
+            <p>#카니발 하이리무진</p>
+            <p>#모하비</p>
+        </div>
+
+        <div class="con2">
+
+            <div>
+
+                <div id="tab-menu">
+
+                    <!-- 텝메뉴 버튼 -->
+
+                    <div id="tab-btn">
+                        <ul>
+                            <li class="active"><a href="#" onclick="return false">상세 모델</a></li>
+                            <li><a href="#" onclick="return false">차종별</a></li>
+                            <li><a href="#" onclick="return false">가격별</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div id="tab-cont">
+                        <!-- 1번 텝메뉴 -->
+
+                        <div class="tap-1">
+                            <select>
+                                <option>외장</option>
+                                <option>선루프</option>
+                                <option>루프랙</option>
+                                <option>차음 글라스</option>
+                            </select>
+                            <select>
+                                <option>내장</option>
+                                <option>슈퍼비전 클러스터</option>
+                                <option>앰비언트 라이트</option>
+                            </select>
+                            <select>
+                                <option>시트</option>
+                                <option>파워시트</option>
+                                <option>열선시트</option>
+                                <option>통풍시트</option>
+                            </select>
+                        </div>
+
+                        <div class="tap-3">
+
+                            <div>
+
+                                <div>
+                                    <img src="images/icon/live/icon-cartype-03.svg">
+                                    <span>EV</span>
+                                </div>
+
+                                <div>
+                                    <img src="images/icon/live/icon-cartype-05.svg">
+                                    <span>승용</span>
+                                </div>
+
+                                <div>
+                                    <img src="images/icon/live/icon-cartype-08.svg">
+                                    <span>RV</span>
+                                </div>
+
+                                <div>
+                                    <img src="images/icon/live/icon-cartype-12.svg">
+                                    <span>상용</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tap-2">
+                            <select>
+                                <option>차종</option>
+                                <option>EV & PBV</option>
+                                <option>승용</option>
+                                <option>RV</option>
+                                <option>택시 & 상용</option>
+                            </select>
+                            <select>
+                                <option>최저가격</option>
+                                <option>100만원</option>
+                                <option>200만원</option>
+                                <option>300만원</option>
+                                <option>400만원</option>
+                                <option>500만원</option>
+                                <option>600만원</option>
+                            </select>
+                            <select>
+                                <option>최고가격</option>
+                                <option>100만원</option>
+                                <option>200만원</option>
+                                <option>300만원</option>
+                                <option>400만원</option>
+                                <option>500만원</option>
+                                <option>600만원</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="login()" class="rjator">검색하기</button>
+    </article>
+
+    <script>
+
+    </script>
+
+
+    <article class="why scroll_on type_left">
+
+        <div>
+
+            <div>
+                <h2>왜 기아를 선택할까요?</h2>
+                <span>#차량</span>
+                <span>#구매</span>
+                <span>#체험</span>
+                <span>#이벤트</span>
+            </div>
+
+            <div>
+                <div>
+                    <img src="images/icon/why/icon_car-05.svg">
+                    <p>견적 내기</p>
+                </div>
+
+                <div>
+                    <img src="images/icon/why/icon_steering.svg">
+                    <p>시승 신청</p>
+                </div>
+
+                <div>
+                    <img src="images/icon/why/icon_location.svg">
+                    <p>판매 네트워크</p>
+                </div>
+
+                <div>
+                    <img src="images/icon/why/icon_gift-box.svg">
+                    <p>구매 혜택</p>
+                </div>
+
+            </div>
+        </div>
+
+    </article>
+
+
+    <article class="art02">
+        <h2 class="title_h2">이달의 혜택 MODELS</h2>
+        <div class="art02_pst">
+            <ul class="selectCar flex_between_center">
+                <li class="selectCar_box">
+                    <div class="selectCar_bg selectCar_bg1">
+                        <div class="selectCar_text">
+                            <p class="text">K5</p>
+                        </div>
+                </li>
+                <li class="selectCar_box">
+                    <div class="selectCar_bg selectCar_bg2">
+                        <div class="selectCar_text">
+                            <p class="text">Ray</p>
+                        </div>
+                </li>
+                <li class="selectCar_box">
+                    <div class="selectCar_bg selectCar_bg3">
+                        <div class="selectCar_text">
+                            <p class="text">EV6</p>
+                        </div>
+                </li>
+                <li class="selectCar_box">
+                    <div class="selectCar_bg selectCar_bg4">
+                        <div class="selectCar_text">
+                            <p class="text">Niro EV</p>
+                        </div>
+                </li>
+            </ul>
+
+            <div class="art02_box">
+                <h2>할부 계산기</h2>
+                <div class="pay">
+                    <p>선수금</p>
+                    <div class="slidecontainer flex_between_center">
+                        <div class="pst">
+                            <p class="p2-1">30만원</p>
+                            <p class="p2-2">2,882만원</p>
+                            <input type="range" min="30" max="2882" step="1" value="30" class="slider" id="myRange"
+                                tooltips="">
+                        </div>
+
+                        <p class="box"><span id="demo"></span> 만원</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>할부 기간</p>
+                    <div class="slidecontainer flex_between_center">
+                        <div class="pst">
+                            <p class="p2-1">3개월</p>
+                            <p class="p2-2">60개월</p>
+                            <input type="range" min="3" max="60" step="3" value="3" class="slider" id="myRange1">
+                        </div>
+
+                        <p class="box"><span id="value"></span> 개월</p>
+                    </div>
+                </div>
+
+                <button class="btn-black" onclick="login()">할부 상품 자세히보기</button>
+            </div>
+        </div>
+
+    </article>
+
+
+    <article class="news">
+        <div>
+            <div>
+                <h2>news</h2>
+                <div class="display-flex-flow">
+                    <section class="news-list">
+                        <h4>2024 상반기 기아 신입채용</h4>
+                        <p>기아가 3월 18일(월)부터 4월1일(월)까지 15일간 상반기 대졸 신입사원 채용을 진행한다.
+
+                            이번 채용은 ▲글로벌사업관리 ▲구매 ▲경영지원 ▲경영지원(AutoLand화성) ▲상품 ▲생산(AutoLand화성, AutoLand광주) ▲정책개발
+                            ▲제조솔루션(생산기술) ▲커뮤니케이션센터 ▲특수사업 ▲품질 ▲PBV비즈니스 등 총 12개 부문에서 19개 직무를 대상으로 진행된다.
+
+                            대상자는 4년제 정규대학 2024년 8월 졸업예정자 또는 학사 및 석사학위 소지자로 최종 합격 발표 및 입사는6월 중 예정이며 ESG경영 실천 차원에서 장애인,
+                            국가유공자, 저소득층 및 다문화가정은 우대해 선발할 예정이다.</p>
+                        <button><img src="images/icon/newsicon.png"></button>
+                    </section>
+                    <section class="news-list">
+                        <h4>EV9, ‘2024 영국 올해의 차’ 수상</h4>
+                        <p>기아 EV9이 유럽 친환경차 격전지 영국에서 최고의 자리에 올랐다.
+
+                            기아는 8일(현지시각) EV9이 ‘2024 영국 올해의 차(UK Car of the Year)’에 최종 선정됐다고 밝혔다.
+
+                            영국 올해의 차는 매해 〈탑기어(TopGear)〉, 〈카(Car)〉, 〈오토카(Autocar)〉, 〈왓카(What Car)〉, 〈오토트레이더(Auto Trader)〉
+                            등 영국에서 활동하는 자동차 전문 기자를 중심으로 한 심사위원단 30명이 12개월 이내 출시된 차량들을 대상으로 심사와 투표를 진행해 선정된다.</p>
+                        <button><img src="images/icon/newsicon.png"></button>
+                    </section>
+                    <section class="news-list">
+                        <h4>‘EV 트렌드 코리아 2024’ 참가</h4>
+                        <p>기아가 ‘EV 트렌드 코리아 2024(EV TREND KOREA 2024)’에 참가해 새로운 모빌리티 시대의 경험을 선보인다.
+
+                            올해로 7회차를 맞은 EV 트렌드 코리아는 전기차 민간보급 확대, 새로운 전기차 문화 형성 등을 위해 환경부 주최로 열리는 서울 유일의 전기차 엑스포로 6일(수)부터
+                            8일(금)까지 서울 강남구 코엑스에서 열린다.</p>
+                        <button><img src="images/icon/newsicon.png"></button>
+                    </section>
+                    <section class="news-list">
+                        <h4>2024년 2월 24만 2,656대 판매</h4>
+                        <p>기아는 2024년 2월 글로벌 시장에서 국내 4만 4,008대, 해외 19만 8,348대, 특수 300대 등 전년 동기 대비 4.6% 감소한 24만 2,656대를
+                            판매했다. (도매 판매 기준)
+
+                            ▲설 연휴로 인한 근무일수 감소 ▲국내 전기차 보조금 미정에 따른 EV 판매 감소 ▲역기저효과 발생 등으로 지난해 같은 기간과 비교해 국내는 12.0%, 해외는
+                            2.8% 판매가 감소했다. (특수 판매 제외)</p>
+                        <button><img src="images/icon/newsicon.png"></button>
+                    </section>
+                </div>
+                <button>더보기</button>
+            </div>
+        </div>
+    </article>
+
+
+    <article class="map-main">
+
+        <div class="main-text-center">
+            <h2>Service network</h2>
+            <p>지점/대리점, 전시차량, 출고센터 조회 및 위치 정보 안내를 도와드립니다.</p>
+        </div>
+
+        <div>
+            <div class="map" id="inf">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.8553143168688!2d127.03962977544943!3d37.46413792999381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca6d48403559d%3A0x1b6609c28f10b918!2z6riw7JWEIOuzuOyCrA!5e0!3m2!1sko!2skr!4v1699286029360!5m2!1sko!2skr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="maps-text">
+                <div>
+                    <input type="text" placeholder="지역 또는 매장명 검색">
+                </div>
+                <div>
+                    <div>
+                        <p>기아자동차 중계영업소</p>
+                        <p>상계5동 168-3<br>
+                            02-952-4807</p>
+                        <button>오후 8:00에 영업 종료</button>
+                    </div>
+                    <div>
+                        <p>기아자동차 마들대리점</p>
+                        <p>상계5동 168-3<br>
+                            02-952-4800</p>
+                        <button>오후 8:30에 영업 종료</button>
+                    </div>
+                    <div>
+                        <p>기아자동차 상계지점</p>
+                        <p>노해로 467<br>
+                            02-933-0051</p>
+                        <button>오후 8:30에 영업 종료</button>
+                    </div>
+                    <div>
+                        <p>기아자동차 창동역대리점</p>
+                        <p>창동 9-1<br>
+                            02-955-3733</p>
+                        <button>토 오전 6:00에 영업 종료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        w3.includeHTML();
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="include.js"></script>
+
+
+</body>
+
+
+</html>

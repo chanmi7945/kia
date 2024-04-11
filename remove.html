@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ko">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>kia-remove</title>
+	<!-- w3 -->
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<!-- js -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<!-- swiperjsload -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<!-- swipercss -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<!-- css -->
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="login.css">
+</head>
+
+
+<body>
+
+    <main>
+
+        <div>
+            <header id="nav-scroll">
+                <div>
+        
+                    <a href="index.html"><img class="logo-img"
+                        src="images/icon/kia_logo.svg"></a>
+        
+                    <div class="pcnav">
+                        <ul>
+                            <li class="fromLeft"><a href="index.html">HOME</a></li>
+                            <li class="fromLeft"><a href="board.html">BOARD</a></li>
+                            <li class="fromLeft"><a href="purchase.html">PURCHASE</a></li>
+                            <li class="fromLeft"><a href="event.html">EVENT</a></li>
+                            <li class="fromLeft"><a href="faq.html">FAQ</a></li>
+                            <li class="fromLeft"><a href="qna.html">QNA</a></li>
+                            <li class="fromLeft"><a href="news.html">NEWS</a></li>
+                            <li class="fromLeft"><a href="joinus.html">JOIN US</a></li>
+                            <li class="fromLeft"><a href="login.html">LOGIN</a></li>
+                            <li class="fromLeft"><a href="remove.html">REMOVE</a></li>
+                        </ul>
+                    </div>
+        
+                    <nav class="menu-nav" id="menu-nav">
+                        <div>
+                            <div class="mo">
+                                <p class="nav-close-btn" onclick="closeNavMenu()">✕</p>
+                                <div>
+                                    <div class="display-flex-flow2">
+                                        <div>
+                                            <h4>안녕하세요! Kia 입니다.</h4>
+                                            <p>지금 로그인하고 맞춤 서비스를 받아 보세요.</p>
+                                        </div>
+                                    </div>
+                                    <div class="display-flex-flow2">
+                                        <button onclick="login()">내 정보</button>
+                                        <button><a href="event.html">이벤트</a></button>
+                                        <button onclick="login()">최근 본 차량</button>
+                                    </div>
+                                </div>
+        
+                                <input type="text" placeholder="궁금하신 제품을 찾아보세요.">
+        
+                            </div>
+        
+                            <ul id="mainMenu" class="mainMenu">
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="board.html">BOARD</a></li>
+                                <li><a href="purchase.html">PURCHASE</a></li>
+                                <li><a href="event.html">EVENT</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="qna.html">QNA</a></li>
+                                <li><a href="news.html">NEWS</a></li>
+                                <li><a href="joinus.html">JOIN US</a></li>
+                                <li><a href="login.html">LOGIN</a></li>
+                                <li><a href="remove.html">REMOVE</a></li>
+                            </ul>
+        
+                            <div class="display-flex-flow mo">
+                                <section class="navCateButton">
+                                    <img src="images/icon/nav/subnav_util_icon01.svg">
+                                    <p>견적 내기</p>
+                                </section>
+                                <section class="navCateButton">
+                                    <img src="images/icon/nav/subnav_util_icon05.svg">
+                                    <p>카탈로그/가격표</p>
+                                </section>
+                                <section class="navCateButton">
+                                    <img src="images/icon/nav/subnav_util_icon02.svg">
+                                    <p>시승 신청</p>
+                                </section>
+                                <section class="navCateButton">
+                                    <img src="images/icon/nav/subnav_util_icon04.svg">
+                                    <p>kIA 이벤트</p>
+                                </section>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <p><a href="login.html">로그인</a></p>
+                            <p><a href="joinus.html">회원가입</a></p>
+                        </div>
+        
+        
+                    </nav>
+        
+        
+                    <div class="header-icons">
+                        <div class="pc">
+                            <img onclick="login()" src="images/icon/nav/my.png">
+                        </div>
+                        <div class="select-lan">
+                            <img class="language-btn" onclick="openLanguageOption()"
+                                src="images/icon/nav/lan.svg">
+                            <ul class="lan-options">
+                                <li class="lan-option">kr</li>
+                                <li class="lan-option">en</li>
+                                <li class="lan-option">cn</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img class="search-btn" onclick="openSearch()"
+                                src="images/icon/nav/search.svg">
+                        </div>
+                        <div class="mo">
+                            <img class="nav-open-btn" id="nav-open-btn" onclick="openNavMenu()"
+                                src="images/icon/nav/ham.png">
+                        </div>
+                    </div>
+                </div>
+        
+                <section class="search-pop">
+                    <div>
+                        <div class="display-flex-flow">
+                            <img src="images/icon/nav/search.svg">
+                            <input type="text" placeholder="검색어를 입력해주세요.">
+                        </div>
+        
+                        <div class="display-flex-flow">
+                            <div>
+                                <div>
+                                    <h4>인기검색어</h4>
+                                    <p>내비게이션</p>
+                                    <p>스포티지</p>
+                                    <p>셀토스</p>
+                                    <p>레이</p>
+                                    <p>쏘렌토</p>
+                                </div>
+        
+                                <div>
+                                    <h4>추천메뉴</h4>
+                                    <p>무슨 차를 살지 결정 못했다면 ? </p>
+                                    <p>매월 나의 지불능력 범위 내의 차량 확인은 ?</p>
+                                    <p>원하는 칼라/옵션의 차량 구입비용을 보고 싶다면 ?</p>
+                                    <p>차량의 옵션 기능이 궁금하다면 ?</p>
+                                </div>
+        
+                            </div>
+                        </div>
+        
+                        <div>
+                            <button class="close-search">닫기</button>
+                        </div>
+                    </div>
+                </section>
+            </header>
+        </div>
+	</main>
+
+    <article class="remove">
+        <section class="login_wraper">
+          <div class="join_text">
+            <h3>회원탈퇴</h3>
+            <p>정말로 탈퇴하시겠습니까?</p>
+            <p>탈퇴 시 이용내역이 삭제되며
+                서비스 이용이 제한됩니다.
+                또한 삭제된 계정은 복구되지 않습니다.</p>
+            <div class="login_buttons">
+              <button class="login_signup">다음으로</button>
+            </div>
+          </div>
+        </section>
+      </article>
+
+    
+      <article class="six">
+        <section class="login_wraper">
+    
+          <div class="join_text">
+            <h3>설문조사</h3>
+            <p>불편했던 점 개선할 점을 공유해주시면<br>
+              더 나온 서비스를 위해 노력하겠습니다.</p>
+          </div>
+    
+          <div class="remove_reason">
+            <h3>탈퇴 사유</h3>
+            <select>
+              <option value="default">선택해주세요</option>
+              <option value="1">이용할 컨텐츠가 적어요.</option>
+              <option value="2">다른 브랜드를 구입 예정입니다.</option>
+              <option value="3">시각적으로 보기가 힘들어요</option>
+              <option value="4">사이트 이용방법을 모르겠어요.</option>
+              <option value="5">기아를 사기엔 너무 비싸요.</option>
+              <option value="6">기타</option>
+            </select>
+            <h3>건의사항<h4>
+                <textarea name="name" rows="8" cols="80" placeholder="소중한 의견 귀담아 듣겠습니다."></textarea>
+                <div class="login_buttons">
+                  <button class="login_signup">제출하기</button>
+                </div>
+          </div>
+        </section>
+      </article>
+    
+    
+      <article class="seven">
+        <section class="login_wraper">
+    
+          <div class="join_text">
+            <h3>탈퇴 완료</h3>
+            <p>정상적으로 탈퇴 처리 되었습니다</p>
+    
+            <p>그동안 이용해주셔서 감사합니다</p>
+          </div>
+    
+          <div class="login_buttons">
+            <button class="login_signup">홈으로</button>
+          </div>
+        </section>
+    
+      </article>
+
+<div w3-include-html="footer.html"></div>
+
+<script>
+  w3.includeHTML();
+</script>
+
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="include.js"></script>
+
+</body>
+
+
+</html>

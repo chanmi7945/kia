@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kia-fqa</title>
+<!-- w3 -->
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<!-- js -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- swiperjsload -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- swipercss -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<!-- css -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="board.css">
+</head>
+
+
+<body>
+
+	<main>
+		<div>
+			<div class="sub_main_dark"></div>
+			<div class="sub_main_text">
+			<h1>FAQ</h1>
+			<h4>궁금하신 내용은 FAQ 검색을 통해 빠르게 확인하실 수 있습니다.</h4>
+			</div>
+			<img src="images/main/pc_4.jpg">
+		</div>
+		<div>
+			<header id="nav-scroll">
+				<div>
+
+					<a href="index.html"><img class="logo-img" src="images/icon/kia_logo.svg"></a>
+
+					<div class="pcnav">
+						<ul>
+							<li class="fromLeft"><a href="index.html">HOME</a></li>
+							<li class="fromLeft"><a href="board.html">BOARD</a></li>
+							<li class="fromLeft"><a href="purchase.html">PURCHASE</a></li>
+							<li class="fromLeft"><a href="event.html">EVENT</a></li>
+							<li class="fromLeft"><a href="faq.html">FAQ</a></li>
+							<li class="fromLeft"><a href="qna.html">QNA</a></li>
+							<li class="fromLeft"><a href="news.html">NEWS</a></li>
+							<li class="fromLeft"><a href="joinus.html">JOIN US</a></li>
+							<li class="fromLeft"><a href="login.html">LOGIN</a></li>
+							<li class="fromLeft"><a href="remove.html">REMOVE</a></li>
+						</ul>
+					</div>
+
+					<nav class="menu-nav" id="menu-nav">
+						<div>
+							<div class="mo">
+								<p class="nav-close-btn" onclick="closeNavMenu()">✕</p>
+								<div>
+									<div class="display-flex-flow2">
+										<div>
+											<h4>안녕하세요! Kia 입니다.</h4>
+											<p>지금 로그인하고 맞춤 서비스를 받아 보세요.</p>
+										</div>
+									</div>
+									<div class="display-flex-flow2">
+										<button onclick="login()">내 정보</button>
+										<button><a href="event.html">이벤트</a></button>
+										<button onclick="login()">최근 본 차량</button>
+									</div>
+								</div>
+
+								<input type="text" placeholder="궁금하신 제품을 찾아보세요.">
+
+							</div>
+
+							<ul id="mainMenu" class="mainMenu">
+								<li><a href="index.html">HOME</a></li>
+								<li><a href="board.html">BOARD</a></li>
+								<li><a href="purchase.html">PURCHASE</a></li>
+								<li><a href="event.html">EVENT</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="qna.html">QNA</a></li>
+								<li><a href="news.html">NEWS</a></li>
+								<li><a href="joinus.html">JOIN US</a></li>
+								<li><a href="login.html">LOGIN</a></li>
+								<li><a href="remove.html">REMOVE</a></li>
+							</ul>
+
+							<div class="display-flex-flow mo">
+								<section class="navCateButton">
+									<img src="images/icon/nav/subnav_util_icon01.svg">
+									<p>견적 내기</p>
+								</section>
+								<section class="navCateButton">
+									<img src="images/icon/nav/subnav_util_icon05.svg">
+									<p>카탈로그/가격표</p>
+								</section>
+								<section class="navCateButton">
+									<img src="images/icon/nav/subnav_util_icon02.svg">
+									<p>시승 신청</p>
+								</section>
+								<section class="navCateButton">
+									<img src="images/icon/nav/subnav_util_icon04.svg">
+									<p>kIA 이벤트</p>
+								</section>
+							</div>
+						</div>
+
+						<div>
+							<p><a href="login.html">로그인</a></p>
+							<p><a href="joinus.html">회원가입</a></p>
+						</div>
+
+
+					</nav>
+
+
+					<div class="header-icons">
+						<div class="pc">
+							<img onclick="login()" src="images/icon/nav/my.png">
+						</div>
+						<div class="select-lan">
+							<img class="language-btn" onclick="openLanguageOption()" src="images/icon/nav/lan.svg">
+							<ul class="lan-options">
+								<li class="lan-option">kr</li>
+								<li class="lan-option">en</li>
+								<li class="lan-option">cn</li>
+							</ul>
+						</div>
+						<div>
+							<img class="search-btn" onclick="openSearch()" src="images/icon/nav/search.svg">
+						</div>
+						<div class="mo">
+							<img class="nav-open-btn" id="nav-open-btn" onclick="openNavMenu()"
+								src="images/icon/nav/ham.png">
+						</div>
+					</div>
+				</div>
+
+				<section class="search-pop">
+					<div>
+						<div class="display-flex-flow">
+							<img src="images/icon/nav/search.svg">
+							<input type="text" placeholder="검색어를 입력해주세요.">
+						</div>
+
+						<div class="display-flex-flow">
+							<div>
+								<div>
+									<h4>인기검색어</h4>
+									<p>내비게이션</p>
+									<p>스포티지</p>
+									<p>셀토스</p>
+									<p>레이</p>
+									<p>쏘렌토</p>
+								</div>
+
+								<div>
+									<h4>추천메뉴</h4>
+									<p>무슨 차를 살지 결정 못했다면 ? </p>
+									<p>매월 나의 지불능력 범위 내의 차량 확인은 ?</p>
+									<p>원하는 칼라/옵션의 차량 구입비용을 보고 싶다면 ?</p>
+									<p>차량의 옵션 기능이 궁금하다면 ?</p>
+								</div>
+
+							</div>
+						</div>
+
+						<div>
+							<button class="close-search">닫기</button>
+						</div>
+					</div>
+				</section>
+			</header>
+		</div>
+	</main>
+
+	<article class="news-search">
+		<section>
+		  <label for="newsSearch">
+			<input type="search" placeholder="검색어를 입력하세요">
+			<span><img src="images/icon/newsicon.png" alt=""></span>
+		  </label>
+		</section>
+	  </article>
+
+	<article class="faq">
+
+		<section class="board-menu-choice-pc">
+			<ul class="qna-tab-menu listtap">
+			  <li class="tapsee">전체</li>
+			  <li>차량 정비</li>
+			  <li>기아멤버스</li>
+			  <li>홈페이지</li>
+				
+			</ul>
+		  </section>
+
+		<section id="list1">
+			<div>
+				<div class="listq faq-q">
+					<div>차량 구매</div>
+					<div>
+						<p>EV케어 프로그램이란 무엇인가요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							기아 EV를 구매한 기아멤버스 회원이시라면 EV스타일케어, EV세이프티 케어에 가입하실 수 있습니다.</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>차량 구매</div>
+					<div>
+						<p>
+							Kia EV 그린패스 요즘에는 어떤 서비스인가요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							멤버십 월 구독료는 매월 1일 정기 자동 결제됩니다.
+							· 단, 1회 차의 경우, 신청 일자 기준 잔여기간을 일할 계산하여 청구하며, 2회 차부터 등록된 지불수단을 통해 정기 자동 결제가 이루어집니다.
+							* 단, 등록된 신용카드 청구 실패 시 고객에게 2번의 추가 청구를 진행,
+							3번째 또한 청구 실패할 경우 해당 멤버십 자동 해지/자동 해지 후 재가입하여도 할인율 소급 적용 불가
+
+
+
+							월 정액 요금을 납부하면 약정된 충전 양만큼 에스에스차처, 한전 급속충전기에서 일정 비율 할인받으실 수 있는 요금제 상품입니다.
+
+							· SSC : 최대 50% 할인 / 한전 : 최대 20% 할인
+
+
+
+							라이트, 그린+ 두 가지 요금제가 있으며, 멤버십 월 구독료를 납부하시면 각 요금제별 약정된 충전 량까지 할인받으실 수 있습니다.
+
+							* 자세한 내용은 아래 링크를 클릭해 주세요.</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>차량 구매</div>
+					<div>
+						<p>
+							광고성 정보 수신 동의 확인 문자/이메일을 받았습니다.</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							기아차량 보유 고객 중 광고성 정보 수신에 동의하신 고객님께 수신동의 여부를 확인하는 메시지 입니다.
+
+							이는 광고성 정보 수신에 동의한 고객님께 2년마다 수신동의 여부를 확인하는 것이 의무화 되면서 수신동의 확인을 위해 메시지를 발송해드렸습니다.
+
+							또한, 수신 동의 철회 시 상품정보, 혜택정보, 프로모션 및 이벤트 안내 등을 받아보실 수 없으며, 광고성 정보 수신동의 철회 시 고객센터(080-200-2000)로
+							문의하여 주시기 바랍니다.</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>차량 구매</div>
+					<div>
+						<p>
+							기아 전기차 구매시 보조금은 어떻게 되나요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							전기차 보조금은 전기차를 구매할 때 정부와 지자체에서 정한 전기자동차 보조금 지원대상 자동차를 신규로 구매해 국내에 등록할 경우 보조금을 지급하는 제도입니다.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>차량 구매</div>
+					<div>
+						<p>
+							All-new Niro EV에 적용된 특화 기술은 어떤 게 있나요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							The All-new Niro EV에는 경제성과 편의성을 높이는 다양한 EV 특화 기술이 적용되어 있습니다.
+
+
+
+							① 배터리 컨디셔닝
+
+							· 외부 온도가 낮을 때 배터리 온도를 최적화해 주행성능 유지 및 충전 시간 단축, 급속충전소를 목적지로 설정하면 배터리 온도를 미리 최적화해 도착 즉시 충전
+							가능하게 합니다.
+
+
+
+							② 히트 펌프 & 배터리 히팅 시스템
+
+							· 고효율 난방 시스템인 히트 펌프 및 배터리 히팅 시스템 적용으로 겨울철 실 주행거리 및 충전시간을 확보합니다.
+
+
+
+							③ 스마트 회생제동 시스템 2.0
+
+							· 전방 교통 흐름 및 내비게이션 지도 정보, 운전자 감속 패턴 정보를 이용하여 회생제동량을 자동 조절하는 기능으로 주행 효율성을 향상시킵니다.
+
+
+
+							④ i-PEDAL 모드
+
+							· 가속 페달만을 이용하여 가속 및 감속, 정차까지 가능한 원 페달 주행모드입니다. </p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>차량 구매</div>
+					<div>
+						<p>
+							내 차 관리를 위한 필수 앱, MyKia는 어떤 서비스 인가요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							기아 온라인 통합 회원을 위한 다양한 혜택과 이벤트
+
+							· MyKia에 가입한 하나의 ID로 기아에서 제공하는 다양한 서비스를 이용하실 수 있습니다.
+
+							(기아닷컴, 기아멤버스 홈페이지, 기아 디지털 키, Kia Connect 등)
+
+							* 기아 디지털 키, Kia Connect 등 일부 서비스는 별도 서비스 가입 및 이용 동의 필요</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="list2">
+			<div>
+				<div class="listq">
+					<div>차량 정비</div>
+					<div>
+						<p>
+							단속 카메라 및 안내 경로에 대한 오류 등이 발행하는 경우 어떤 조치를 취할 수 있나요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+
+							사고를 목격하시거나, 갑작스러운 도로 공사, 통제, 포트홀로 길이 막힌 경우, 지도안내 화면에서 해당 지점을 길게 누르면, ‘사용자 신고’를 바로 실행할 수
+							있습니다.
+
+							신고된 정보는 향후 안전 운행을 위한 소중한 데이터로 활용됩니다.
+
+							* 지도 정보가 이상하면 “지도정보”, 도로 카메라 정보가 잘못되어 있으면 “카메라”, 터널 등 외부 공기를 차단해야 할 곳이 있다면 “외부 공기 차단”을
+							눌러주세요.
+
+							* 표준형5W, 고급형6세대 가 적용된 차종에서 제공됩니다.</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>차량 정비</div>
+					<div>
+						<p>
+							모바일 내비게이션 대비 기아 내비게이션의 ‘도착 예정 시간’은 정확한가요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							기아 내비게이션은 커넥티드 카 기반의 교통 정보 활용, 경로 탐색 품질이 개선되는 순환 구조를 통해 안정된 경로 품질을 제공하고 있습니다.</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>차량 정비</div>
+					<div>
+						<p>
+							모바일 내비게이션과 차별화 되는 기아 내비게이션만의 특장점은 무엇인가요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							① 일반 지도만 사용하는 모바일 내비게이션과는 달리 국내 전국 ADAS 지도 구축을 통해 정확한 지도 정보를 제공합니다.
+
+							② GPS 수신정보 외 차량 내 센서 데이터를 이용하여 터널,지하차도, 지하주차장에서도 정확한 길 안내 서비스를 제공합니다.
+
+							* 지하주차장 지도를 제공하는 주차장은 코엑스, 롯데 월드, 현대 프리미엄 아울렛 김포, 더현대 서울, 현대백화점 판교점, 디에이치 자이 개포, 디에이치 반포
+							라클라스 등 을 제공하고 있으며, 앞으로 지속적으로 확대 예정입니다.
+
+							③ 지도 데이터 및 위치 데이터를 활용한 다양한 차량 연동 기능을 통해 차량 내 고객에게 보다 안전하고 편리한 기능을 제공합니다.
+
+							- 터널 진입 시 외부공기 유입방지 제어, 내비게이션 연동 스마트 크루즈 컨트롤, 그린존 드라이브 모드 등</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="list3">
+			<div>
+				<div class="listq">
+					<div>기아멤버스</div>
+					<div>
+						<p>
+							기아멤버스 카드를 분실했는데, 재발급 받기 전에 오토큐에서 포인트를 사용할 수 있습니까?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							적립된 멤버스포인트는 카드 없이도 오토큐에서 사용이 가능합니다.
+
+							오토큐에서 실물 카드 없이 멤버스포인트 사용 시 아래와 같은 방법으로 이용하시면 됩니다.
+
+							- 차량명의자와 휴대폰명의자가 동일한 경우 휴대폰 인증하여 사용 가능
+						</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>기아멤버스</div>
+					<div>
+						<p>
+							기아멤버스 모바일카드 발급과 사용방법이 어떻게 되나요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							기아멤버스 모바일 카드는 기아멤버스 사이트 또는 Mykia 어플리케이션에 회원가입(카드회원까지 가입 필수)을 하시면 발급 받으실 수 있습니다.
+
+							· 개인(법인 실운행자 포함)
+
+							· 개인 사업자 회원 대상
+
+							* 법인제외 모바일 카드도 실물 카드와 동일하게 카드번호 확인 및 바코드 리딩으로 포인트 적립/ 사용이 가능합니다.
+
+							(제휴처에서 바코드 리딩이 어려울 경우 단말기에 카드번호 입력 후 사용)
+						</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>기아멤버스</div>
+					<div>
+						<p>
+							인증서를 발급받는 도중에 나갔는데 지갑에 인증서가 생겼어요. 인증서 발급을 취소할 수는 없나요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							인증서는 My 비밀번호를 등록/입력하면 발급이 완료됩니다.
+							정상적으로 인증서가 발급된 상태이며, 인증서 삭제를 원할 경우 [카카오톡 실행 > 더보기탭 > 인증서 > 설정(우측 상단 톱니바퀴) > 인증서 삭제]를 이용해주세요.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="listq">
+					<div>기아멤버스</div>
+					<div>
+						<p>
+							기아멤버스 카드를 모바일카드 or 실물 카드로 선택하여 받을 수 있나요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							2018년 4월 2일부터 기아자동차 구입 시 멤버십 가입 신청서에 "모바일카드"를 선택하신 경우, 별도의 실물 카드 발급 없이 모바일카드 발급 안내 문자가 발송되고
+							있습니다.
+
+							수신하신 문자에 포함된 URL로 접속하신 후 모바일카드 발급 및 사용이 가능하십니다.
+
+							(단, 문자수신 동의 여부에 ‘거부’ 를 선택하시면 모바일카드 관련 안내 문자 수신이 불가할 수 있습니다.)</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="list4">
+			<div>
+				<div class="listq">
+					<div>홈페이지</div>
+					<div>
+						<p>
+							기아 홈페이지 회원가입을 했으나 로그인이 되지 않습니다. 왜 그런가요?</p>
+					</div>
+				</div>
+				<div>
+					<div>답변</div>
+					<div>
+						<p>
+							정보통신망법 개정 및 회원 고객님의 개인정보보호를 위하여 홈페이지에 1년 이상 로그인하지 않는 경우, 회원정보의 보호 및 운영의 효율성을 위해 휴면계정으로
+							전환됩니다.
+
+							휴면계정으로 로그인이 되지 않을 경우, 본인인증을 통해 해제 후 이용이 가능합니다.
+
+							또한, 홈페이지에 1년 이상 비로그인 시 분리보관 후 4년 후 탈퇴/파기 합니다.
+
+
+
+							* 휴면계정 해제(본인 인증)가 불가하거나 정상 로그인이 되지 않는 경우는 기아 고객센터(080-200-2000)로 문의하여 주시기 바랍니다. </p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="faq-page">
+			<p class="faq-checkpage">1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+		</div>
+
+	</article>
+
+	<script>
+	// fqa 리스트 탭
+window.addEventListener("load", function () {
+  const tapList = document.querySelectorAll(".listtap > li");
+  for (let i = 0; i < tapList.length; i++) {
+    tapList[i].addEventListener("click", function () {
+      cleartap();
+      this.classList.add("tapsee");
+      if (i == 0) {
+        document.getElementById("list1").style.display = "block";
+        document.getElementById("list2").style.display = "none";
+        document.getElementById("list3").style.display = "none";
+        document.getElementById("list4").style.display = "none";
+      } else if (i == 1) {
+        document.getElementById("list1").style.display = "none";
+        document.getElementById("list2").style.display = "block";
+        document.getElementById("list3").style.display = "none";
+        document.getElementById("list4").style.display = "none";
+      } else if (i == 2) {
+        document.getElementById("list1").style.display = "none";
+        document.getElementById("list2").style.display = "none";
+        document.getElementById("list3").style.display = "block";
+        document.getElementById("list4").style.display = "none";
+      } else if (i == 3) {
+        document.getElementById("list1").style.display = "none";
+        document.getElementById("list2").style.display = "none";
+        document.getElementById("list3").style.display = "none";
+        document.getElementById("list4").style.display = "block";
+      }
+    });
+  }
+
+  function cleartap() {
+
+    for (let i = 0; i < tapList.length; i++) {
+      tapList[i].classList.remove("tapsee");
+    }
+  }
+});
+
+
+// fqa 리스트 아코디언
+
+window.addEventListener("load", function () {
+  const List = document.querySelectorAll(".listq");
+  for (let i = 0; i < List.length; i++) {
+    List[i].addEventListener("click", function () {
+      clearlist();
+      var panel = this.nextElementSibling;
+      panel.classList.add("listsee");
+    });
+  }
+
+  function clearlist() {
+    for (let i = 0; i < List.length; i++) {
+      var panel = List[i].nextElementSibling;
+      panel.classList.remove("listsee");
+    }
+  }
+});
+
+// faq 페이지 넘버
+window.addEventListener("load", function () {
+  const tagList = document.querySelectorAll(".faq-page > p");
+  for (let i = 0; i < tagList.length; i++) {
+    tagList[i].addEventListener("click", function () {
+      clearPage();
+      this.classList.add("faq-checkpage");
+    });
+  }
+
+  function clearPage() {
+
+    for (let i = 0; i < tagList.length; i++) {
+      tagList[i].classList.remove("faq-checkpage");
+    }
+  }
+});
+
+</script>
+
+	<div w3-include-html="footer.html"></div>
+
+	<script>
+		w3.includeHTML();
+	</script>
+
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="include.js"></script>
+
+
+</body>
+
+
+</html>

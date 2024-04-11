@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>purchase-이선미</title>
+  <!-- w3 -->
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <!-- js -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- swiperjsload -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- swipercss -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- css -->
+
+  <link rel="stylesheet" href="purchase.css">
+  <link rel="stylesheet" href="style.css">
+
+
+  <script>
+    $(document).ready(function () {
+      const $counters = $(".scroll_on");
+      const exposurePercentage = 50;
+      const loop = true;
+
+      $(window)
+        .on("scroll", function () {
+          $counters.each(function () {
+            const $el = $(this);
+
+            const rect = $el[0].getBoundingClientRect();
+            const winHeight = window.innerHeight;
+            const contentHeight = rect.bottom - rect.top;
+
+            if (
+              rect.top <=
+              winHeight - (contentHeight * exposurePercentage) / 100 &&
+              rect.bottom >= (contentHeight * exposurePercentage) / 100
+            ) {
+              $el.addClass("active");
+            }
+
+            if (
+              loop &&
+              (rect.bottom <= 0 || rect.top >= window.innerHeight)
+            ) {
+              $el.removeClass("active");
+            }
+          });
+        })
+        .scroll();
+    });
+  </script>
+</head>
+
+<body>
+
+  
+
+
+	<main>
+		<div>
+			<header id="nav-scroll">
+				<div>
+
+					<a href="index.html"><img class="logo-img" src="images/icon/kia_logo.svg"></a>
+
+					<div class="pcnav">
+						<ul>
+							<li class="fromLeft"><a href="index.html">HOME</a></li>
+							<li class="fromLeft"><a href="board.html">BOARD</a></li>
+							<li class="fromLeft"><a href="purchase.html">PURCHASE</a></li>
+							<li class="fromLeft"><a href="event.html">EVENT</a></li>
+							<li class="fromLeft"><a href="faq.html">FAQ</a></li>
+							<li class="fromLeft"><a href="qna.html">QNA</a></li>
+							<li class="fromLeft"><a href="news.html">NEWS</a></li>
+							<li class="fromLeft"><a href="joinus.html">JOIN US</a></li>
+							<li class="fromLeft"><a href="login.html">LOGIN</a></li>
+							<li class="fromLeft"><a href="remove.html">REMOVE</a></li>
+						</ul>
+					</div>
+
+					<nav class="menu-nav" id="menu-nav">
+						<div>
+							<div class="mo">
+								<p class="nav-close-btn" onclick="closeNavMenu()">✕</p>
+								<div>
+									<div class="display-flex-flow2">
+										<div>
+											<h4>안녕하세요! Kia 입니다.</h4>
+											<p>지금 로그인하고 맞춤 서비스를 받아 보세요.</p>
+										</div>
+									</div>
+									<div class="display-flex-flow2">
+										<button onclick="login()">내 정보</button>
+										<button><a href="event.html">이벤트</a></button>
+										<button onclick="login()">최근 본 차량</button>
+									</div>
+								</div>
+
+								<input type="text" placeholder="궁금하신 제품을 찾아보세요.">
+
+							</div>
+
+							<ul id="mainMenu" class="mainMenu">
+								<li><a href="index.html">HOME</a></li>
+								<li><a href="board.html">BOARD</a></li>
+								<li><a href="purchase.html">PURCHASE</a></li>
+								<li><a href="event.html">EVENT</a></li>
+								<li><a href="faq.html">FAQ</a></li>
+								<li><a href="qna.html">QNA</a></li>
+								<li><a href="news.html">NEWS</a></li>
+								<li><a href="joinus.html">JOIN US</a></li>
+								<li><a href="login.html">LOGIN</a></li>
+								<li><a href="remove.html">REMOVE</a></li>
+							</ul>
+
+							<div class="display-flex-flow mo">
+								<section class="navCateButton">
+									<img src="images/icon/nav/subnav_util_icon01.svg">
+									<p>견적 내기</p>
+								</section>
+								<section class="navCateButton">
+									<img src="images/icon/nav/subnav_util_icon05.svg">
+									<p>카탈로그/가격표</p>
+								</section>
+								<section class="navCateButton">
+									<img src="images/icon/nav/subnav_util_icon02.svg">
+									<p>시승 신청</p>
+								</section>
+								<section class="navCateButton">
+									<img src="images/icon/nav/subnav_util_icon04.svg">
+									<p>kIA 이벤트</p>
+								</section>
+							</div>
+						</div>
+
+						<div>
+							<p><a href="login.html">로그인</a></p>
+							<p><a href="joinus.html">회원가입</a></p>
+						</div>
+
+
+					</nav>
+
+
+					<div class="header-icons">
+						<div class="pc">
+							<img onclick="login()" src="images/icon/nav/my.png">
+						</div>
+						<div class="select-lan">
+							<img class="language-btn" onclick="openLanguageOption()" src="images/icon/nav/lan.svg">
+							<ul class="lan-options">
+								<li class="lan-option">kr</li>
+								<li class="lan-option">en</li>
+								<li class="lan-option">cn</li>
+							</ul>
+						</div>
+						<div>
+							<img class="search-btn" onclick="openSearch()" src="images/icon/nav/search.svg">
+						</div>
+						<div class="mo">
+							<img class="nav-open-btn" id="nav-open-btn" onclick="openNavMenu()"
+								src="images/icon/nav/ham.png">
+						</div>
+					</div>
+				</div>
+
+				<section class="search-pop">
+					<div>
+						<div class="display-flex-flow">
+							<img src="images/icon/nav/search.svg">
+							<input type="text" placeholder="검색어를 입력해주세요.">
+						</div>
+
+						<div class="display-flex-flow">
+							<div>
+								<div>
+									<h4>인기검색어</h4>
+									<p>내비게이션</p>
+									<p>스포티지</p>
+									<p>셀토스</p>
+									<p>레이</p>
+									<p>쏘렌토</p>
+								</div>
+
+								<div>
+									<h4>추천메뉴</h4>
+									<p>무슨 차를 살지 결정 못했다면 ? </p>
+									<p>매월 나의 지불능력 범위 내의 차량 확인은 ?</p>
+									<p>원하는 칼라/옵션의 차량 구입비용을 보고 싶다면 ?</p>
+									<p>차량의 옵션 기능이 궁금하다면 ?</p>
+								</div>
+
+							</div>
+						</div>
+
+						<div>
+							<button class="close-search">닫기</button>
+						</div>
+					</div>
+				</section>
+			</header>
+		</div>
+
+  <article class="mains">
+
+    <div>
+      <img src="images/purchase/mb_main.jpg" alt="모바일" />
+      <img src="images/purchase/pc_main.jpg" alt="pc" />
+    </div>
+
+    <div>
+      <h3>The Kia EV9</h3>
+      <p>모두와 꿈꿔왔던 SUV EV의 시작</p>
+      <div>
+        <div>
+          <p>77,280,000</p>
+          <p>원부터</p>
+        </div>
+        <p>(세제혜택 전 / 2WD 에어 기준)</p>
+        <div>
+          <button type="button" class="modal_btn">견적내기</button>
+          <button onclick="login()">시승 신청</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div>
+      <div>
+        <p>501km</p>  
+        <p>1회충전 최대주행</p>
+        <p>(2WD 19인치 휠 기준)</p>
+      </div>
+
+      <div>
+        <p>150KW</p>
+        <p>최고출력</p>
+        <p>(*4WD 기준 283kW)</p>
+      </div>
+
+      <div>
+        <p>10년/20만km</p>
+        <p>고전압 배터리</p>
+      </div>
+    </div> -->
+
+    <div>
+      <div>
+        <img src="images/purchase/usp_fuel_effeciency.svg" />
+        <p>
+          501km 1회충전 최대주행<br />
+          (2WD 19인치 휠 기준)
+        </p>
+      </div>
+
+      <div>
+        <img src="images/purchase/usp_maximum_power.svg" />
+        <p>
+          150kW 최고출력<br />
+          (*4WD 기준 283kW)
+        </p>
+      </div>
+
+      <div>
+        <img src="images/purchase/usp_ev_guarantee.svg" />
+        <p>10년/20만km 고전압 배터리</p>
+      </div>
+    </div>
+  </article>
+
+  <!--모달 팝업-->
+  <div class="modal">
+    <div class="modal_popup">
+      <h2>할부 계산기</h2>
+      <div class="pay">
+        <p>선수금</p>
+        <div class="slidecontainer flex_between_center">
+          <div class="pst">
+            <p class="p2-1">30만원</p>
+            <p class="p2-2">2,882만원</p>
+            <input type="range" min="30" max="2882" step="1" value="30" class="slider" id="myRange" tooltips="" />
+          </div>
+
+          <p class="box"><span id="demo"></span> 만원</p>
+        </div>
+      </div>
+
+      <div>
+        <p>할부 기간</p>
+        <div class="slidecontainer flex_between_center2">
+          <div class="pst">
+            <p class="p2-1">3개월</p>
+            <p class="p2-2">60개월</p>
+            <input type="range" min="3" max="60" step="3" value="3" class="slider" id="myRange1" />
+          </div>
+
+          <p class="box"><span id="value"></span> 개월</p>
+        </div>
+      </div>
+      <button type="button" class="close_btn">닫기</button>
+    </div>
+  </div>
+  <!--end 모달 팝업-->
+
+  <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+      output.innerHTML = this.value;
+    };
+
+    const pst = document.getElementById("myRange1");
+    const value = document.getElementById("value");
+    value.textContent = pst.value;
+    pst.oninput = function () {
+      value.textContent = this.value;
+    };
+
+    const modal = document.querySelector(".modal");
+    const modalOpen = document.querySelector(".modal_btn");
+    const modalClose = document.querySelector(".close_btn");
+
+    //열기 버튼을 눌렀을 때 모달팝업이 열림
+    modalOpen.addEventListener("click", function () {
+      //'on' class 추가
+      modal.classList.add("on");
+    });
+    //닫기 버튼을 눌렀을 때 모달팝업이 닫힘
+    modalClose.addEventListener("click", function () {
+      //'on' class 제거
+      modal.classList.remove("on");
+    });
+  </script>
+    </main>
+
+  <article class="sheath scroll_on type_bottom">
+    <section class="sheath-cover">
+      <p>외장</p>
+      <p>새로운 모빌리티 시대 SUV EV<br />디자인의 새로운 기준</p>
+
+      <div class="swiper sheaths">
+        <div class="swiper-wrapper sheaths-w">
+          <div class="swiper-slide sheaths-s">
+            <img src="images/purchase/mb_1.jpg" />
+            <img src="images/purchase/pc_1.jpg" />
+            <h3>플래그십 익스테리어</h3>
+            <p>
+              미래지향적인 디자인 요소와 웅장하고 고급스러운 플래그십으로서의
+              품격
+            </p>
+          </div>
+          <div class="swiper-slide sheaths-s">
+            <img src="images/purchase/mb_2.jpg" />
+            <img src="images/purchase/pc_2.jpg" />
+            <h3>디지털 타이거 페이스로 완성한<br />미래지향적인 전면</h3>
+            <p>
+              여러 개의 조명이 다양한 패턴으로 구현되는 디지털 패턴 라이팅
+              그릴, 밤하늘의 별자리를 형상화한 스타맵 LED 주간 주행등, 세로로
+              배치된 12개 큐브 광원을 통해 하이테크한 이미지를 구현하는
+              스몰큐브 프로젝션 LED 헤드램프
+            </p>
+          </div>
+
+          <div class="swiper-slide sheaths-s">
+            <img src="images/purchase/mb_3.jpg" />
+            <img src="images/purchase/pc_3.jpg" />
+            <h3>
+              과감한 직선과 부드러운 자체 볼륨으로 그려낸<br />
+              대담하고 웅장한 측면
+            </h3>
+            <p>
+              비행기 동체에서 영감을 받은 기하학적 사이드 프로파일,삼각형
+              펜더의 조형으로 구현된 과감하고 당당한 이미지, 기하학적
+              조형요소로 구성된 휠 디자인, 자동 전개/수납 기능으로 편의성이
+              증대된 오토 플러시 도어 핸들
+            </p>
+          </div>
+
+          <div class="swiper-slide sheaths-s">
+            <img src="images/purchase/mb_4.jpg" />
+            <img src="images/purchase/pc_4.jpg" />
+            <h3>
+              와이드한 숄더 라인과 차폭감이 강조된<br />
+              리어 램프로 자신감 있고 당당한 후면
+            </h3>
+            <p>
+              숄더라인을 따라 매끈하게 이어진 당당한 후면, 스텐스를 강조하는
+              스타맵 LED 리어 램프, 전면부와 통일된 디자인 요소로 자체의
+              와이드함을 강조한 리어 범퍼 하단부, 히든 타입 와이퍼와 함께
+              부드러운 면으로 심플하게 구성된 테일게이트 스타일
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-next sheath-n"></div>
+      <div class="swiper-button-prev sheath-p"></div>
+      <div class="swiper-pagination sheath-pag"></div>
+    </section>
+  </article>
+
+
+  <script>
+    var sheaths = new Swiper(".sheaths", {
+      // spaceBetween: 10,
+      loop: true,
+      // effect: 'fade',
+      pagination: {
+        el: ".sheath-pag",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".sheath-n",
+        prevEl: ".sheath-p",
+      },
+      breakpoints: {
+        1366: {
+          slidesPerView: 3, //브라우저가 1366보다 클 때
+          spaceBetween: 20,
+        },
+      },
+    });
+  </script>
+
+  <article class="guts scroll_on type_bottom">
+    <p>내장</p>
+    <p>
+      모두에게 휴식과 영감을 제공하는<br />
+      고품격 실내 공간
+    </p>
+
+    <div class="tab">
+      <button class="tabmenu-button tablink tabmenu-color" onclick="openCity(event,'London')">
+        Front View
+      </button>
+      <button class="tabmenu-button tablink" onclick="openCity(event,'Paris')">
+        Side View
+      </button>
+    </div>
+
+    <div id="London" class="city">
+      <img src="images/purchase/front.jpg">
+    </div>
+
+    <div id="Paris" class="city" style="display: none">
+      <img src="images/purchase/side.jpg" />
+    </div>
+
+    <p>※ 본 사진과 설명은 참고용으로 실제와 다를 수 있습니다.</p>
+  </article>
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(
+          " tabmenu-color",
+          ""
+        );
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " tabmenu-color";
+    }
+  </script>
+
+  <article class="accessories">
+    <div>
+      <h3 class="scroll_on type_bottom">기아 순정 액세서리</h3>
+      <p class="scroll_on type_bottom">Kia Genuine Accessories</p>
+    </div>
+
+    <div>
+      <section class="scroll_on type_bottom">
+        <div class="c">
+          <img src="images/purchase/accessories_1.jpg" />
+        </div>
+        <h3>라운지 패키지(4WD, 6인승 릴렉션 한정 적용 가능)</h3>
+        <p>
+          2열 콘솔 "빌트인 냉장고 포함 (좌상단), 콘솔 팝업 테이블 (우상단)<br />2열
+          스마트폰 무선충전 시스템 (좌하단),후석 목배게 (우하단)
+        </p>
+      </section>
+
+      <section class="scroll_on type_bottom">
+        <div class="c">
+          <img src="images/purchase/accessories_2.jpg" />
+        </div>
+        <h3>캠핑 패키지</h3>
+        <p>러기지 팝업 테이블 (위), LED 포터블 램프 (아래)</p>
+      </section>
+
+      <section class="scroll_on type_bottom">
+        <div class="c">
+          <img src="images/purchase/accessories_3.jpg" />
+        </div>
+        <h3>트레일러 패키지</h3>
+        <p>
+          토우 히치 <br /><br />*트레일러 패키지 선택시 19인치 전면가공 휠에는
+          셀프 레벨라이저가 포함 장착됩니다.
+        </p>
+      </section>
+
+      <section class="scroll_on type_bottom">
+        <div class="c">
+          <img src="images/purchase/accessories_4.jpg" />
+        </div>
+        <h3>기타 옵션 상품</h3>
+        <p>
+          사이드 스텝 (좌상단), 리버서블 러기지 매트 (우상단)<br />차량
+          보호필름 I *외부 (좌하단), 차량 보호 필름 II *내외부 (우하단)<br />
+          * 리버서블 러기지 매트는 원할한 양면 활용을 위해 차량 러기지 공간과
+          일부 상이하게 제작되었습니다.
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <article class="four-buttons">
+    <div>
+      <div>
+        <div>
+          <img src="images/purchase/subnav_util_icon01.svg" />
+          <p>Give a Quote</p>
+
+          <p>Quote</p>
+        </div>
+
+        <div>
+          <img src="images/purchase/subnav_util_icon02.svg" />
+          <p>Apply for a test drive</p>
+
+          <p>Test Drive</p>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <img src="images/purchase/subnav_util_icon05.svg" />
+          <p>Catalog / Price list</p>
+
+          <p>Catalog</p>
+        </div>
+
+        <div>
+          <img src="images/purchase/subnav_util_icon04.svg" />
+          <p>Purchase benefits of the month</p>
+
+          <p>Benefits</p>
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <div w3-include-html="footer.html"></div>
+
+  <script>
+    w3.includeHTML();
+  </script>
+
+  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="include.js"></script>
+
+</html>

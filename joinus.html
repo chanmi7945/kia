@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kia-joinus</title>
+<!-- w3 -->
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<!-- js -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- swiperjsload -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- swipercss -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<!-- css -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="login.css">
+
+</head>
+
+
+<body>
+
+  <main>
+
+    <div>
+      <header id="nav-scroll">
+          <div>
+  
+              <a href="index.html"><img class="logo-img"
+                  src="images/icon/kia_logo.svg"></a>
+  
+              <div class="pcnav">
+                  <ul>
+                      <li class="fromLeft"><a href="index.html">HOME</a></li>
+                      <li class="fromLeft"><a href="board.html">BOARD</a></li>
+                      <li class="fromLeft"><a href="purchase.html">PURCHASE</a></li>
+                      <li class="fromLeft"><a href="event.html">EVENT</a></li>
+                      <li class="fromLeft"><a href="faq.html">FAQ</a></li>
+                      <li class="fromLeft"><a href="qna.html">QNA</a></li>
+                      <li class="fromLeft"><a href="news.html">NEWS</a></li>
+                      <li class="fromLeft"><a href="joinus.html">JOIN US</a></li>
+                      <li class="fromLeft"><a href="login.html">LOGIN</a></li>
+                      <li class="fromLeft"><a href="remove.html">REMOVE</a></li>
+                  </ul>
+              </div>
+  
+              <nav class="menu-nav" id="menu-nav">
+                  <div>
+                      <div class="mo">
+                          <p class="nav-close-btn" onclick="closeNavMenu()">✕</p>
+                          <div>
+                              <div class="display-flex-flow2">
+                                  <div>
+                                      <h4>안녕하세요! Kia 입니다.</h4>
+                                      <p>지금 로그인하고 맞춤 서비스를 받아 보세요.</p>
+                                  </div>
+                              </div>
+                              <div class="display-flex-flow2">
+                                  <button onclick="login()">내 정보</button>
+                                  <button><a href="event.html">이벤트</a></button>
+                                  <button onclick="login()">최근 본 차량</button>
+                              </div>
+                          </div>
+  
+                          <input type="text" placeholder="궁금하신 제품을 찾아보세요.">
+  
+                      </div>
+  
+                      <ul id="mainMenu" class="mainMenu">
+                          <li><a href="index.html">HOME</a></li>
+                          <li><a href="board.html">BOARD</a></li>
+                          <li><a href="purchase.html">PURCHASE</a></li>
+                          <li><a href="event.html">EVENT</a></li>
+                          <li><a href="faq.html">FAQ</a></li>
+                          <li><a href="qna.html">QNA</a></li>
+                          <li><a href="news.html">NEWS</a></li>
+                          <li><a href="joinus.html">JOIN US</a></li>
+                          <li><a href="login.html">LOGIN</a></li>
+                          <li><a href="remove.html">REMOVE</a></li>
+                      </ul>
+  
+                      <div class="display-flex-flow mo">
+                          <section class="navCateButton">
+                              <img src="images/icon/nav/subnav_util_icon01.svg">
+                              <p>견적 내기</p>
+                          </section>
+                          <section class="navCateButton">
+                              <img src="images/icon/nav/subnav_util_icon05.svg">
+                              <p>카탈로그/가격표</p>
+                          </section>
+                          <section class="navCateButton">
+                              <img src="images/icon/nav/subnav_util_icon02.svg">
+                              <p>시승 신청</p>
+                          </section>
+                          <section class="navCateButton">
+                              <img src="images/icon/nav/subnav_util_icon04.svg">
+                              <p>kIA 이벤트</p>
+                          </section>
+                      </div>
+                  </div>
+  
+                  <div>
+                      <p><a href="login.html">로그인</a></p>
+                      <p><a href="joinus.html">회원가입</a></p>
+                  </div>
+  
+  
+              </nav>
+  
+  
+              <div class="header-icons">
+                  <div class="pc">
+                      <img onclick="login()" src="images/icon/nav/my.png">
+                  </div>
+                  <div class="select-lan">
+                      <img class="language-btn" onclick="openLanguageOption()"
+                          src="images/icon/nav/lan.svg">
+                      <ul class="lan-options">
+                          <li class="lan-option">kr</li>
+                          <li class="lan-option">en</li>
+                          <li class="lan-option">cn</li>
+                      </ul>
+                  </div>
+                  <div>
+                      <img class="search-btn" onclick="openSearch()"
+                          src="images/icon/nav/search.svg">
+                  </div>
+                  <div class="mo">
+                      <img class="nav-open-btn" id="nav-open-btn" onclick="openNavMenu()"
+                          src="images/icon/nav/ham.png">
+                  </div>
+              </div>
+          </div>
+  
+          <section class="search-pop">
+              <div>
+                  <div class="display-flex-flow">
+                      <img src="images/icon/nav/search.svg">
+                      <input type="text" placeholder="검색어를 입력해주세요.">
+                  </div>
+  
+                  <div class="display-flex-flow">
+                      <div>
+                          <div>
+                              <h4>인기검색어</h4>
+                              <p>내비게이션</p>
+                              <p>스포티지</p>
+                              <p>셀토스</p>
+                              <p>레이</p>
+                              <p>쏘렌토</p>
+                          </div>
+  
+                          <div>
+                              <h4>추천메뉴</h4>
+                              <p>무슨 차를 살지 결정 못했다면 ? </p>
+                              <p>매월 나의 지불능력 범위 내의 차량 확인은 ?</p>
+                              <p>원하는 칼라/옵션의 차량 구입비용을 보고 싶다면 ?</p>
+                              <p>차량의 옵션 기능이 궁금하다면 ?</p>
+                          </div>
+  
+                      </div>
+                  </div>
+  
+                  <div>
+                      <button class="close-search">닫기</button>
+                  </div>
+              </div>
+          </section>
+      </header>
+  </div>
+	</main>
+
+  <article class="joinUs">
+
+    <section class="login_wraper">
+      <div class="join_text">
+        <h3>회원가입</h3>
+        <p>회원으로 가입하시면 다양한 서비스와 함께
+          정기 이벤트 뉴스와 소식을 이메일로 받아보실 수도 있습니다.</p>
+      </div>
+
+      <div class="login_input">
+        <div class="join_adress">
+          <label for=""><input type="id" placeholder="ex :  6~15자리 영문+숫자">
+          </label>
+          <button class="join_adress_button">중복확인</button>
+        </div>
+        <div>
+          <label for=""><input type="password" placeholder="영문+숫자+특수문자 8~20자리"></label>
+        </div>
+        <div>
+          <label for=""><input type="password" placeholder="영문+숫자+특수문자 8~20자리"></label>
+        </div>
+        <div>
+          <label for=""><input type="text" placeholder="이름을 입력해주세요."></label>
+        </div>
+        <div> 
+          <label for=""><input type="text" placeholder="이메일을 입력해주세요."></label>
+        </div>
+
+        <div class="join_adress">
+          <label for=""><input type="text" placeholder="도로명, 지번, 건물명 검색"></label>
+          <button class="join_adress_button">주소검색</button>
+        </div>
+      </div>
+
+      <div class="login_buttons">
+        <button class="login_signup move_button" href="javascript:;" data-anchor="anchor_div1" >확인</button>
+      </div>
+
+      <div class="social_login">
+        <p>소셜 계정으로 가입</p>
+        <div>
+          <img src="images/icon/naver.png" alt="">
+          <img src="images/icon/goolgle.png" alt="">
+          <img src="images/icon/kakao.png" alt="">
+        </div>
+      </div>
+
+    </section>
+  </article>
+
+  <article class="join_law" id="anchor_div1">
+    <section class="login_wraper">
+      <div class="join_text">
+        <h3>이용 약관</h3>
+        <p>이용 약관을 확인하세요.</p>
+      </div>
+
+      <div class="join_law_read">
+        <div>
+          <p>
+            제1조 (목적)<br>
+            이 약관은 전기통신 사업법 및 동법 시행령에 의하여 기아(주) (이하 회사라 합니다.)가 제공하는 인터넷 홈페이지 서비스(이하 “서비스”라 합니다.)의 이용조건 및 절차에 관한 사항,
+            회사와 이용자의 권리와 의무 및 책임사항을 규정함을 목적으로 합니다.<br><br>
+
+            제2조 (약관의 효력)<br>
+            이 약관은 기아 인터넷 홈페이지 (www.kia.com)에 공시함으로 그 효력이 발생됩니다. 회사는 이 약관의 내용을 변경할 수 있으며, 변경된 약관은 제 9조와 같은 방법으로 공시함으로
+            그 효력이 발생됩니다. 이용자는 개정된 약관에 동의하지 아니하는 경우 본인의 회원등록을 취소(회원탈퇴)할 수 있으며, 계속 사용의 경우는 약관 개정에 대한 동의로 간주됩니다. 개정된
+            약관은 공지와 동시에 그 효력이 발생됩니다.<br><br>
+
+            제3조 (약관 외 준칙)<br>
+            이 약관에 명시되어 있지 않은 사항은 전기통신 기본법, 전기통신 사업법, 기타 관련법령의 규정에 따릅니다.<br><br>
+
+            제 4조 (용어의 정의)<br>
+            1. 통합 계정 : 회사가 제공하는 개별 서비스를 하나의 ID와 비밀번호(PASSWORD)로 이용할 수 있도록 회사가 회원에게 배정한 계정을 말합니다.<br><br>
+
+            2. 회원 : 통합 계정을 만든 회원이 홈페이지 서비스를 이용하기 위해 개인정보를 제공하여 홈페이지 회원 가입을 한 자로서, 홈페이지 서비스의 정보를 지속적으로 제공받으며, 이용할 수
+            있는 자를 말합니다. 기아 홈페이지 회원이 되는 경우 별도의 회원 가입절차 없이 기아멤버스 사이트 및 MyKia 모바일 어플리케이션에 이용이 가능한 통합 회원이 됩니다. 기아 홈페이지
+            회원이 되는 경우 함께 이용가능한 다른 개별서비스의 범위는 변동될 수 있습니다.<br><br>
+
+            3. 이용자 : 본 약관에 따라 회사가 제공하는 서비스를 받는 회원 및 비회원을 말합니다.<br><br>
+
+            4. 아이디 (ID) : 회원 식별과 회원의 서비스 이용을 위하여 회원이 선정하고 회사가 승인하는 문자와 숫자의 조합을 말하며, 홈페이지 회원의 ID는 통합 계정과
+            동일합니다.<br><br>
+
+            5. 비밀번호 : 회원이 통신상의 자신의 비밀을 보호하기 위해 선정한 문자와 숫자의 조합을 말합니다. <br><br>
+
+            6. 서비스 : 구현되는 단말기(PC, TV, 휴대형 단말기 등의 각종 유무선 장치를 포함) 와 상관없이 이용자가 이용할 수 있는 서비스를 의미합니다. <br><br>
+
+            7. 게시물 : 회원이 서비스를 이용함에 있어 서비스상에 게시한 부호ㆍ문자ㆍ음성ㆍ음향ㆍ화상ㆍ동영상 등의 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크 등을 의미합니다.
+            <br><br>
+
+            8. 전자우편 (E-mail) : 인터넷을 통한 우편입니다.<br><br>
+
+            9.해지 : 회사 또는 회원이 서비스 이용 이후 그 이용계약을 종료시키는 의사표시를 말합니다.<br><br>
+
+            10. 홈페이지(kia.com) : 회사가 이용자에게 서비스를 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 이용자가 열람 및 이용할 수 있도록 설정한 가상의 서비스 공간을 말합니다.
+        </p>
+        </div>
+      </div>
+
+      <p class="yes">위 내용을 숙지했으며 약관에 동의합니다.</p>
+
+
+      <div class="join_law_button">
+        <button class="join_law_accept move_button" href="javascript:;" data-anchor="anchor_div2">동의하기</button>
+        <button class="join_law_cancel">거절하기</button>
+      </div>
+    </section>
+  </article>
+
+  <article class="join_done" id="anchor_div2">
+    <section class="login_wraper">
+      <div class="join_text">
+        <h3>가입 완료</h3>
+        <p class="join_done_a">포르쉐 코리아 가입을 환영합니다</p>
+      </div>
+      <div class="join_done_img">
+        <img src="/images/icon/kia_logo.svg" alt="">
+      </div>
+      <div class="join_law_button">
+        <button class="join_law_accept" onClick="location.href='login.html'">로그인하기</button>
+        <button class="join_law_cancel" onClick="location.href='index.html'">홈으로</button>
+      </div>
+    </section>
+  </article>
+  
+	<div w3-include-html="footer.html"></div>
+
+	<script>
+		w3.includeHTML();
+	</script>
+	
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="include.js"></script>
+
+  </body>
+
+</html>
