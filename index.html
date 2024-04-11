@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
     <title>Kia</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="#">
     <style type="text/css"></style>
     <!-- w3 -->
@@ -15,10 +15,13 @@
     <!-- 제이쿼리 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- slick -->
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- jsdelivr
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- jsdelivr -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
@@ -41,8 +44,8 @@
         <div class="mbg-list">
             <div class="mbg-img1">
                 <div class="main-img">
-                    <img src="images/main/pc_1-1.jpg">
-                    <img src="images/main/mb_1-1.jpg">
+                    <img src="./images/main/pc_1-1.jpg">
+                    <img src="./images/main/mb_1-1.jpg">
                 </div>
                 <div class="main-text">
                     <p>Masters that Inspire</p>
@@ -51,10 +54,10 @@
                     <button id="product_button">견적내기</button>
                 </div>
             </div>
-            <div class="mbg-img2">
+           <div class="mbg-img2">
                 <div class="main-img">
-                    <img src="images/main/pc_2.jpg">
-                    <img src="images/main/mb_2.jpg">
+                    <img src="./images/main/pc_2.jpg">
+                    <img src="./images/main/mb_2.jpg">
                 </div>
                 <div class="main-text">
                     <p>나만의 스케일대로</p>
@@ -66,8 +69,8 @@
 
             <div class="mbg-img3">
                 <div class="main-img">
-                    <img src="images/main/pc_3.jpg">
-                    <img src="images/main/mb_3.jpg">
+                    <img src="./images/main/pc_3.jpg">
+                    <img src="./images/main/mb_3.jpg">
                     </img>
                 </div>
                 <div class="main-text">
@@ -80,8 +83,8 @@
 
             <div class="mbg-img4">
                 <div class="main-img">
-                    <img src="images/main/pc_4.jpg">
-                    <img src="images/main/mb_4.jpg">
+                    <img src="./images/main/pc_4.jpg">
+                    <img src="./images/main/mb_4.jpg">
                 </div>
                 <div class="main-text">
                     <p>새로운 도심 엔트리 EV</p>
@@ -93,8 +96,8 @@
 
             <div class="mbg-img5">
                 <div class="main-img">
-                    <img src="images/main/pc_5.jpg">
-                    <img src="images/main/mb_5.jpg">
+                    <img src="./images/main/pc_5.jpg">
+                    <img src="./images/main/mb_5.jpg">
                 </div>
                 <div class="main-text">
                     <p>The Mainstream</p>
@@ -105,8 +108,8 @@
 
             <div class="mbg-img6">
                 <div class="main-img">
-                    <img src="images/main/pc_6.png">
-                    <img src="images/main/mb_6.png">
+                    <img src="./images/main/pc_6.png">
+                    <img src="./images/main/mb_6.png">
                 </div>
                 <div class="main-text">
                     <p>기아를 만나는 새로운 방법</p>
@@ -118,8 +121,8 @@
 
             <div class="mbg-img7">
                 <div class="main-img">
-                    <img src="images/main/pc_7.jpg">
-                    <img src="images/main/mb_7.jpg">
+                    <img src="./images/main/pc_7.jpg">
+                    <img src="./images/main/mb_7.jpg">
                 </div>
                 <div class="main-text">
                     <p>스마트한 카 라이프의 시작! 기아렌터카</p>
@@ -140,6 +143,21 @@
         </div>
 
     </main>
+
+    <script>
+        // main 슬라이더
+        $('.mbg-list').slick({
+            speed: 700,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            prevArrow: $('.slick-prev'),
+            nextArrow: $('.slick-next'),
+            dots: true,
+            fade: true,
+            cssEase: 'linear',
+        });
+    </script>
 
     <!-- 메인 견적내기 modal창 -->
     <article class="product-modal">
@@ -163,7 +181,7 @@
 
                                 <div class="swiper-slide mimg-s">
                                     <h3>카니발</h3>
-                                    <img src="/images/main/modal_1.png" alt="">
+                                    <img src="./images/main/modal_1.png" alt="">
                                     <p class="append-buttons">
                                         <a href="#">34,700,000 원부터
                                         </a>
@@ -172,7 +190,7 @@
 
                                 <div class="swiper-slide mimg-s">
                                     <h3>카니발 하이리무진</h3>
-                                    <img src="/images/main/modal_2.png" alt="">
+                                    <img src="./images/main/modal_2.png" alt="">
                                     <p class="append-buttons">
                                         <a href="#">62,500,000 원부터
                                         </a>
@@ -181,7 +199,7 @@
 
                                 <div class="swiper-slide mimg-s">
                                     <h3>K5</h3>
-                                    <img src="/images/main/modal_3.png" alt="">
+                                    <img src="./images/main/modal_3.png" alt="">
                                     <p class="append-buttons">
                                         <a href="#">27,840,000 원부터</a>
                                     </p>
@@ -189,7 +207,7 @@
 
                                 <div class="swiper-slide mimg-s">
                                     <h3>레이</h3>
-                                    <img src="/images/main/modal_4.png" alt="">
+                                    <img src="./images/main/modal_4.png" alt="">
                                     <p class="append-buttons">
                                         <a href="#">27,750,000 원부터</a>
                                     </p>
@@ -281,7 +299,7 @@
                     </div>
 
                     <div class="modal_footer">
-                        <img src="/images/icon/icon_alert.svg" alt="">
+                        <img src="./images/icon/icon_alert.svg" alt="">
                         <small>본 견적서는 고객님의 차량 구입(청약) 의사 결정에 도움을 드리고자 작성된 것으로 법적인 효력은 없으며, 계약을 원하실 경우 별도로 청약 의사 표시를 하셔야
                             합니다. </small>
                     </div>
@@ -298,7 +316,7 @@
         $('.mbg-list').slick({
             speed: 700,
             infinite: true,
-            autoplay: true, 
+            autoplay: true,
             autoplaySpeed: 5000,
             prevArrow: $('.slick-prev'),
             nextArrow: $('.slick-next'),
@@ -349,7 +367,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/k9.png" alt="">
+                                                <img src="./images/car/k9.png" alt="">
                                             </div>
 
                                             <div>
@@ -374,9 +392,10 @@
                                                 75,710,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -401,7 +420,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/ev6.png" alt="">
+                                                <img src="./images/car/ev6.png" alt="">
                                             </div>
 
                                             <div>
@@ -426,9 +445,10 @@
                                                 77,680,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -452,7 +472,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/bongo3-ev.png" alt="">
+                                                <img src="./images/car/bongo3-ev.png" alt="">
                                             </div>
 
                                             <div>
@@ -477,9 +497,10 @@
                                                 45,780,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -503,7 +524,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/bongo3.png" alt="">
+                                                <img src="./images/car/bongo3.png" alt="">
                                             </div>
 
                                             <div>
@@ -528,9 +549,10 @@
                                                 75,710,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -554,7 +576,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/canival.png" alt="">
+                                                <img src="./images/car/canival.png" alt="">
                                             </div>
 
                                             <div>
@@ -579,9 +601,10 @@
                                                 75,710,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -623,7 +646,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/niro.png" alt="">
+                                                <img src="./images/car/niro.png" alt="">
                                             </div>
 
                                             <div>
@@ -648,9 +671,10 @@
                                                 30,020,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -674,7 +698,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/k8.png" alt="">
+                                                <img src="./images/car/k8.png" alt="">
                                             </div>
 
                                             <div>
@@ -699,9 +723,10 @@
                                                 50,270,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -725,7 +750,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/sportage.png" alt="">
+                                                <img src="./images/car/sportage.png" alt="">
                                             </div>
 
                                             <div>
@@ -750,9 +775,10 @@
                                                 43,900,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -776,7 +802,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/morning.png" alt="">
+                                                <img src="./images/car/morning.png" alt="">
                                             </div>
 
                                             <div>
@@ -801,9 +827,10 @@
                                                 15,600,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -843,7 +870,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/canival.png" alt="">
+                                                <img src="./images/car/canival.png" alt="">
                                             </div>
 
                                             <div>
@@ -868,9 +895,10 @@
                                                 46,440,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -894,7 +922,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/sorento.png" alt="">
+                                                <img src="./images/car/sorento.png" alt="">
                                             </div>
 
                                             <div>
@@ -919,9 +947,10 @@
                                                 51,470,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -945,7 +974,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/sportage_w.png" alt="">
+                                                <img src="./images/car/sportage_w.png" alt="">
                                             </div>
 
                                             <div>
@@ -970,9 +999,10 @@
                                                 40,160,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -996,7 +1026,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/mohave.png" alt="">
+                                                <img src="./images/car/mohave.png" alt="">
                                             </div>
 
                                             <div>
@@ -1021,9 +1051,10 @@
                                                 52,020,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -1047,7 +1078,7 @@
                                             </div>
 
                                             <div>
-                                                <img src="images/car/k5.png" alt="">
+                                                <img src="./images/car/k5.png" alt="">
                                             </div>
 
                                             <div>
@@ -1072,9 +1103,10 @@
                                                 52,020,000 원
                                             </div>
 
-                                            <img onclick="compares()" class="compare" src="images/icon/compare.svg">
+                                            <img onclick="compares()" class="compare" src="./images/icon/compare.svg">
 
-                                            <img onclick="favorites()" class="favorite" src="images/icon/favorite.svg">
+                                            <img onclick="favorites()" class="favorite"
+                                                src="./images/icon/favorite.svg">
                                         </section>
 
                                         <section class="r-s-cover2">
@@ -1173,7 +1205,7 @@
                                     </div>
 
                                     <div>
-                                        <img src="images/car/niro.png" alt="">
+                                        <img src="./images/car/niro.png" alt="">
                                     </div>
 
                                     <div>
@@ -1216,7 +1248,7 @@
                                     </div>
 
                                     <div>
-                                        <img src="images/car/ev6.png" alt="">
+                                        <img src="./images/car/ev6.png" alt="">
                                     </div>
 
                                     <div>
@@ -1259,7 +1291,7 @@
                                     </div>
 
                                     <div>
-                                        <img src="images/car/ev9.png" alt="">
+                                        <img src="./images/car/ev9.png" alt="">
                                     </div>
 
                                     <div>
@@ -1307,7 +1339,7 @@
 
         <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">모델명을 입력해주세요. 예) 레이 <img
-                    src="images/icon/newsicon.png"></button>
+                    src="./images/icon/newsicon.png"></button>
 
 
             <div id="myDropdown" class="dropdown-content">
@@ -1412,22 +1444,22 @@
                             <div>
 
                                 <div>
-                                    <img src="images/icon/live/icon-cartype-03.svg">
+                                    <img src="./images/icon/live/icon-cartype-03.svg">
                                     <span>EV</span>
                                 </div>
 
                                 <div>
-                                    <img src="images/icon/live/icon-cartype-05.svg">
+                                    <img src="./images/icon/live/icon-cartype-05.svg">
                                     <span>승용</span>
                                 </div>
 
                                 <div>
-                                    <img src="images/icon/live/icon-cartype-08.svg">
+                                    <img src="./images/icon/live/icon-cartype-08.svg">
                                     <span>RV</span>
                                 </div>
 
                                 <div>
-                                    <img src="images/icon/live/icon-cartype-12.svg">
+                                    <img src="./images/icon/live/icon-cartype-12.svg">
                                     <span>상용</span>
                                 </div>
 
@@ -1489,22 +1521,22 @@
 
             <div>
                 <div>
-                    <img src="images/icon/why/icon_car-05.svg">
+                    <img src="./images/icon/why/icon_car-05.svg">
                     <p>견적 내기</p>
                 </div>
 
                 <div>
-                    <img src="images/icon/why/icon_steering.svg">
+                    <img src="./images/icon/why/icon_steering.svg">
                     <p>시승 신청</p>
                 </div>
 
                 <div>
-                    <img src="images/icon/why/icon_location.svg">
+                    <img src="./images/icon/why/icon_location.svg">
                     <p>판매 네트워크</p>
                 </div>
 
                 <div>
-                    <img src="images/icon/why/icon_gift-box.svg">
+                    <img src="./images/icon/why/icon_gift-box.svg">
                     <p>구매 혜택</p>
                 </div>
 
@@ -1594,7 +1626,7 @@
 
                             대상자는 4년제 정규대학 2024년 8월 졸업예정자 또는 학사 및 석사학위 소지자로 최종 합격 발표 및 입사는6월 중 예정이며 ESG경영 실천 차원에서 장애인,
                             국가유공자, 저소득층 및 다문화가정은 우대해 선발할 예정이다.</p>
-                        <button><img src="images/icon/newsicon.png"></button>
+                        <button><img src="./images/icon/newsicon.png"></button>
                     </section>
                     <section class="news-list">
                         <h4>EV9, ‘2024 영국 올해의 차’ 수상</h4>
@@ -1604,7 +1636,7 @@
 
                             영국 올해의 차는 매해 〈탑기어(TopGear)〉, 〈카(Car)〉, 〈오토카(Autocar)〉, 〈왓카(What Car)〉, 〈오토트레이더(Auto Trader)〉
                             등 영국에서 활동하는 자동차 전문 기자를 중심으로 한 심사위원단 30명이 12개월 이내 출시된 차량들을 대상으로 심사와 투표를 진행해 선정된다.</p>
-                        <button><img src="images/icon/newsicon.png"></button>
+                        <button><img src="./images/icon/newsicon.png"></button>
                     </section>
                     <section class="news-list">
                         <h4>‘EV 트렌드 코리아 2024’ 참가</h4>
@@ -1612,7 +1644,7 @@
 
                             올해로 7회차를 맞은 EV 트렌드 코리아는 전기차 민간보급 확대, 새로운 전기차 문화 형성 등을 위해 환경부 주최로 열리는 서울 유일의 전기차 엑스포로 6일(수)부터
                             8일(금)까지 서울 강남구 코엑스에서 열린다.</p>
-                        <button><img src="images/icon/newsicon.png"></button>
+                        <button><img src="./images/icon/newsicon.png"></button>
                     </section>
                     <section class="news-list">
                         <h4>2024년 2월 24만 2,656대 판매</h4>
@@ -1621,7 +1653,7 @@
 
                             ▲설 연휴로 인한 근무일수 감소 ▲국내 전기차 보조금 미정에 따른 EV 판매 감소 ▲역기저효과 발생 등으로 지난해 같은 기간과 비교해 국내는 12.0%, 해외는
                             2.8% 판매가 감소했다. (특수 판매 제외)</p>
-                        <button><img src="images/icon/newsicon.png"></button>
+                        <button><img src="./images/icon/newsicon.png"></button>
                     </section>
                 </div>
                 <button>더보기</button>
@@ -1686,8 +1718,8 @@
         w3.includeHTML();
     </script>
 
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="include.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <script type="text/javascript" src="include.js" defer></script>
 
 
 </body>

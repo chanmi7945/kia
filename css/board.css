@@ -35,9 +35,6 @@ section {
 
 /* 아코디언파트 시작 */
 
-.accordion_wrapper>ul {
-
-}
 
 .accordion_wrapper>ul>li:hover {
     margin: 0;
